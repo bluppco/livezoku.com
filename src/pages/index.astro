@@ -2,6 +2,7 @@
 import Header from "../components/Header/index.astro";
 import Main from "../components/Main/index.astro";
 import Welcome from "../components/Welcome/index.astro";
+import Footer from "../components/Footer/index.astro"
 ---
 
 <html lang="en">
@@ -10,11 +11,12 @@ import Welcome from "../components/Welcome/index.astro";
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<Header/>
-		<Main/>
-		<Welcome/>
+		
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<Header/>
+		<Welcome/>
+		<Main/>
+		<Footer/>
 	</body>
 </html>
