@@ -1,5 +1,7 @@
 ---
-
+import Header from "../components/Header/index.astro";
+import Main from "../components/Main/index.astro";
+import Welcome from "../components/Welcome/index.astro";
 ---
 
 <html lang="en">
@@ -8,8 +10,9 @@
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-		<title>Nandini</title>
+		<Header/>
+		<Main/>
+		<Welcome/>
 	</head>
 	<body>
 		<h1>Astro</h1>
