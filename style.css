@@ -2,3 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.para{
+    @apply mx-5 px-10 text-center text-xl;
+}
+
+.anc{
+    @apply mx-5 px-10 text-center text-3xl font-thin pb-10;
+}
+
+.hover-a{
+    @apply hover:text-red-400;
+}
+
+.img{
+    @apply max-h-screen max-w-xl pt-4;
+}
