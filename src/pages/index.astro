@@ -1,22 +1,23 @@
 ---
-import Header from "../components/Header/index.astro";
-import Main from "../components/Main/index.astro";
-import Welcome from "../components/Welcome/index.astro";
-import Footer from "../components/Footer/index.astro"
+
+// IMPORT LAYOUTS
+import Layout from "@/layouts/layout/index.astro"
+
+// IMPORT COMPONENTS
+import Header from "@/components/header/index.astro"
+import Main from "@/components/main/index.astro"
+import Welcome from "@/components/home/welcome/index.astro"
+import Car from "@/components/footer/index.astro"
+
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="style.css">
-	</head>
-	<body>
-		<Header/>
-		<Welcome/>
-		<Main/>
-		<Footer/>
-	</body>
-</html>
+<Layout>
+	<Header/>
+	<Welcome 
+		title="WELCOME TO ZOKU"
+		description="XYZ"
+	/>
+	<!-- <Main/>
+	<Car/> -->
+</Layout>
+
