@@ -2,25 +2,23 @@
 
 // IMPORT ASTRO ATOMS
 import Paragraph from "@/atoms/paragraph/index.astro"
+import Heading1 from "@/atoms/heading1/index.astro"
 
 // Get Astro Props
 const {
 
     title,
-    description,
+    description1,
+    description2,
 
 } = Astro.props
 
-// console.log("description = " , description)
-
-
 ---
 
-<section class="mx-5 px-10 py-7">
-    <h1 class="text-center text-4xl hover:underline">{ title }</h1>
-    <br>
-    <!-- <p class="text-center text-lg">{ description }</p> -->
-    <Paragraph>{ description }</Paragraph>
+<section class="mx-5 px-10 py-12">
+    <Heading1>{ title }</Heading1>
+    <br><br> 
+    <Paragraph>{ description1 }</Paragraph>
     <br><br>
-    <p class="text-center text-lg">We’re Zoku. Designed for the new generation of business travelers, we’re so much more than a long stay hotel. We’re a place you can call your second home, even on your first visit. We’ve created a hive of private Lofts and rooftop Social Spaces, so you can stay connected and well rested as you live and work throughout Europe. Throw yourself into your work and play, and effortlessly discover one of our home cities. It will be your home city next.</p>
+    <Paragraph>{ description2 }</Paragraph>
 </section>
