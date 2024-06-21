@@ -1,0 +1,39 @@
+---
+
+// IMPORT ASTRO ATOMS
+import Heading3 from "@/atoms/heading3/index.astro";
+import Paragraph3 from "@/atoms/paragraph3/index.astro";
+import Button2 from "@/atoms/button2/index.astro";
+
+// GET ASTRO PROPS
+const {
+
+    title,
+    button,
+    description,
+
+} = Astro.props
+
+---
+
+<div class="bg-blue-200 h-100">
+    <div class="flex">
+        <div>
+            <Heading3>{ title }</Heading3>
+            <br><br>
+            <Paragraph3>{ description }</Paragraph3>
+            <br>
+            <div class="justify-center items-center flex">
+            <Button2>{ button }</Button2>
+            </div>
+        </div>
+    <div>
+            <br><br><br>
+            <Paragraph3>Certified</Paragraph3>
+            <div>
+                <img src="./public/img.jpeg" alt="Image" class="rounded-full max-h-80 max-w-72 pr-6 pb-9">
+            </div>
+            
+</div>
+
+<br><br>
