@@ -1,0 +1,60 @@
+---
+
+// IMPORT ASTRO ATOMS
+import Paragraph2 from "@/atoms/paragraph2/index.astro";
+import Heading2 from "@/atoms/heading2/index.astro";
+import Div1 from "@/atoms/div1/index.astro";
+
+// GET ASTRO PROPS
+const {
+
+    description1,
+    description2,
+    description3,
+    description4,
+    description5,
+
+} = Astro.props
+
+---
+
+
+<Heading2>AS FEATURED IN</Heading2>
+<br>
+<section class="flex">
+    <div class="p-4">
+        <Div1>
+            <img src="./public/img.jpeg" alt="Image" class="h-30 w-20">
+        </Div1>
+        <br>
+        <Paragraph2>{ description1 }</Paragraph2>
+    </div>
+    <div class="p-4">
+        <Div1>
+            <img src="./public/img.jpeg" alt="Image" class="h-30 w-20">
+        </Div1>
+        <br>
+        <Paragraph2>{ description2 }</Paragraph2>
+    </div>
+    <div class="p-4">
+        <Div1>
+            <img src="./public/img.jpeg" alt="Image" class="h-30 w-20">
+        </Div1>
+        <br>
+        <Paragraph2>{ description3 }</Paragraph2>
+    </div>
+    <div class="p-4">
+        <Div1>
+            <img src="./public/img.jpeg" alt="Image" class="h-30 w-20">
+        </Div1>
+        <br>
+        <Paragraph2>{ description4 }</Paragraph2>
+    </div>
+    <div class="p-4">
+        <Div1>
+            <img src="./public/img.jpeg" alt="Image" class="h-30 w-20">
+        </Div1>
+        <br>
+        <Paragraph2>{ description5 }</Paragraph2>
+    </div>
+</section>
