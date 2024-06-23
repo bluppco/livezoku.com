@@ -1,0 +1,30 @@
+---
+
+// GET ASTRO PROPS
+const { data } = Astro.props
+
+---
+<section>
+    {
+
+        data.map( ( item ) => {
+
+            return (
+                <div class="flex items-center gap-4">
+                    <ul class="py-2">
+                        <li class="text-sm font-light capitalize">
+                            <a
+                                aria-label={ "explore " + item.data.title }
+                                href={ item.data.link }
+                            >
+                                { item.data.title }
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            )
+
+        })
+
+    }
+</section>

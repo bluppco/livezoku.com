@@ -1,0 +1,33 @@
+---
+
+// IMPORT ASTRO ATOMS
+import HeadingTwo from "@/atoms/headings/two/index.astro"
+import ParagraphRegularCenter from "@/atoms/paragraph/regular/center/index.astro"
+
+// GET ASTRO PROPS
+const {
+
+    description1,
+    description2,
+    title,
+
+} = Astro.props
+
+---
+
+<div class="bg-gray-200 h-90">
+    <div class="flex p-4">
+        <div class="pl-6 pt-9 pb-9 pr-4 rounded-full max-h-screen max-w-screen-sm">
+            <img
+                alt="Image"
+                class="w-full h-full"
+                src="/img.jpeg"
+            />
+        </div>
+        <div class="pt-9 space-y-8">
+            <HeadingTwo>{ title }</HeadingTwo>
+            <ParagraphRegularCenter>{ description1 }</ParagraphRegularCenter>
+            <ParagraphRegularCenter>{ description2 }<ParagraphRegularCenter>
+        </div>
+    </div>
+</div>

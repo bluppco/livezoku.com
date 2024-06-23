@@ -1,0 +1,25 @@
+---
+
+// IMPORT ASTRO ATOMS
+import ParagraphRegularCenter from "@/atoms/paragraph/regular/center/index.astro"
+
+// GET ASTRO PROPS
+const {
+
+    alternative_text,
+    description,
+    source,
+
+} = Astro.props
+
+---
+<div class="p-4 space-y-6">
+    <div class="flex justify-center items-center">
+        <img
+            alt={ alternative_text }
+            class="h-30 w-20"
+            src={ source }
+        />
+    </div>
+    <ParagraphRegularCenter>{ description }</ParagraphRegularCenter>
+</div>

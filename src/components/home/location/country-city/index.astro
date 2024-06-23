@@ -1,0 +1,21 @@
+---
+
+// IMPORTS ASTRO ATOMS
+import ParagraphXlCenter from "@/atoms/paragraph/xl/center/index.astro"
+
+// GET ASTRO PROPS
+const {
+
+    description,
+    heading,
+    href,
+
+} = Astro.props
+
+---
+<div class="p-4 text-center items-center space-y-4">
+    <a href={ href }>
+        <span class="text-center text-3xl font-thin pb-10 hover:text-red-400 hover:text-4xl">{ heading }</span>
+    </a>
+    <ParagraphXlCenter>{ description }</ParagraphXlCenter>
+</div>
