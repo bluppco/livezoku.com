@@ -1,0 +1,42 @@
+---
+
+// IMPORT ASTRO ATOMS
+import Paragraph from "@/atoms/paragraph/index.astro";
+import Heading2 from "@/atoms/heading2/index.astro";
+import Button3 from "@/atoms/button3/index.astro"
+
+
+// GET ASTRO PROPS
+const {
+
+    title,
+    description,
+    button
+
+} = Astro.props
+
+---
+
+
+<section class="bg-orange-100 h-100">
+    <div>
+        <div class="pt-12">
+            <Heading2>{ title }</Heading2>
+            <br><br>
+            <div>
+                <Paragraph>{ description }</Paragraph>
+            </div>
+            <br><br>
+            <div class="text-center pb-8 space-x-5">
+                <input type="text" placeholder="First Name" class="relative items-center 
+                justify-center py-2 px-12 text-gray bg-white">
+                <input type="text" placeholder="Email" class="relative items-center 
+                justify-center py-2 px-12 text-gray bg-white">
+                <Button3>{ button }</Button3>
+            </div>
+            
+        </div>
+        
+    </div>
+</section>
+

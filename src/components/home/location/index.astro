@@ -1,0 +1,52 @@
+---
+
+// IMPORT ASTRO ATOMS
+import Paragraph from "@/atoms/paragraph/index.astro";
+import Heading2 from "@/atoms/heading2/index.astro";
+import Anchor from "@/atoms/anchor/index.astro";
+
+
+// GET ASTRO PROPS
+const {
+
+    title,
+    description1,
+    description2,
+    heading1,
+
+} = Astro.props
+
+---
+
+
+<br><br>
+<Heading2>{ title }</Heading2>
+<br>
+<Paragraph>{ description1 }</Paragraph>
+<br><br>
+
+<section class="flex justify-center space-x-4">
+    <div class="p-4 text-center items-center">
+        <Anchor>{ heading1 }</Anchor>
+        <br>
+        <Paragraph>{ description2 }</Paragraph>
+    </div>
+
+    <div class="p-4 text-center items-center">
+        <Anchor>{ heading1 }</Anchor>
+        <br>
+        <Paragraph>{ description2 }</Paragraph>
+    </div>
+
+    <div class="p-4 text-center items-center">
+        <Anchor>{ heading1 }</Anchor>
+        <br>
+        <Paragraph>{ description2 }</Paragraph>
+    </div>
+
+    <div class="p-4 text-center items-center">
+        <Anchor>{ heading1 }</Anchor>
+        <br>
+        <Paragraph>{ description2 }</Paragraph>
+    </div>
+</section>
