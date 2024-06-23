@@ -1,0 +1,119 @@
+---
+
+// IMPORT ASTRO ATOMS
+import Paragraph3 from "@/atoms/paragraph3/index.astro";
+import Anchor1 from "@/atoms/anchor1/index.astro";
+import Button3 from "@/atoms/button3/index.astro";
+
+// GET ASTRO PROPS
+const {
+
+    heading1,
+    description2,
+    button,
+
+} = Astro.props
+
+---
+
+<section class="relative flex justify-center items-center">
+
+    <!-- class="overflow: hidden" -->
+
+    <video autoplay loop muted plays-inline>
+        <source
+            src="/public/video.mp4"
+            type="video/mp4"
+        />
+    </video>
+
+    <div>
+        <nav class="absolute bg-transparent shadow-md max-w-screen-xl flex flex-wrap items-top space-x-8 pl-20 pt-12">
+            <div class="">
+                <i class="fa-solid fa-bars text-3xl" id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="300" data-dropdown-trigger="hover"/><svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg></i>
+                <p>Menu</p>
+                <div id="dropdownDelay" class="z-10 hidden bg-gray-900 divide-y">
+                    <ul class="py-2 text-sm" aria-labelledby="dropdownDelayButton">
+                        <li>Team Retreats</li>
+                        <li>Group Bookings</li>
+                        <li>Sustainability</li>
+                        <li>Devlopment</li>
+                        <li>Gift Card</li>
+                        <li>Blog</li>
+                        <li>Press</li>
+                        <li>Legal</li>
+                        <li>Jobs</li>
+                        <li>contact</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="">
+                <i class="fa-solid fa-location-dot text-3xl"></i>
+                <p>Location</p>
+            </div>
+            <ul class="flex">
+                <li class="text-5xl text-center grow-x-20">Zoku</li>
+                <button type="button" class="inline-flex items-center text-lg justify-center py-2 px-20 text-white bg-red-400" id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay" data-dropdown-delay="300" data-dropdown-trigger="hover">Book Now
+                    <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/></svg>
+                </Button3>
+                <div id="dropdownDelay" class="z-10 hidden bg-gray-900 divide-y">
+                    <ul class="py-2 text-sm" aria-labelledby="dropdownDelayButton">
+                        <li>AMSTERDAM</li>
+                        <li>COPENHAGEN</li>
+                        <li>PARIS</li>
+                        <li>VIENNA</li>
+                    </ul>
+                </div>
+                
+            </ul>
+        </nav>
+    </div>
+
+
+
+    <div class="absolute bottom-36 flex justify-center space-x-12 ">
+        <div class="p-4 text-center items-center">
+            <Anchor1>{ heading1 }</Anchor1>
+            <br>
+            <Paragraph3>{ description2 }</Paragraph3>
+        </div>
+    
+        <div class="p-4 text-center items-center">
+            <Anchor1>{ heading1 }</Anchor1>
+            <br>
+            <Paragraph3>{ description2 }</Paragraph3>
+        </div>
+    
+        <div class="p-4 text-center items-center">
+            <Anchor1>{ heading1 }</Anchor1>
+            <br>
+            <Paragraph3>{ description2 }</Paragraph3>
+        </div>
+    
+        <div class="p-4 text-center items-center">
+            <Anchor1>{ heading1 }</Anchor1>
+            <br>
+            <Paragraph3>{ description2 }</Paragraph3>
+        </div>
+    </div>
+    <br><br>
+
+    <div class="absolute bottom-8 flex justify-end pb-8">
+        <input type="text" placeholder="Select location" 
+        class="items-center justify-center py-3 px-4 box-border border-2 bg-white">
+        <div class="flex box-border border-2">
+            <input type="text" placeholder="Arrival" class="items-center 
+            justify-center py-3 px-4 bg-white">
+            <i class="fa-solid fa-calendar-days items-center 
+            justify-center py-3 px-4  bg-white border-1 text-gray-300 text-xl "></i>
+        </div>
+        <div class="flex box-border border-2">
+            <input type="text" placeholder="Departure" class="items-center justify-center py-3 px-4 bg-white">
+            <i class="fa-solid fa-calendar-days items-center 
+            justify-center py-3 px-4  bg-white border-1 text-gray-300 text-xl "></i>
+        </div>
+        <input type="text" placeholder="Got a code?" class="items-center 
+        justify-center py-3 px-4 bg-white">
+        <Button3>{ button }</Button3>
+    </div>
+</section>
