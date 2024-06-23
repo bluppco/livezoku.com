@@ -1,18 +1,17 @@
 ---
 
 // IMPORT ASTRO ATOMS
-import Anchor2 from "@/atoms/anchor2/index.astro";
-
+import Anchor2 from "@/atoms/anchor2/index.astro"
 
 // GET ASTRO PROPS
 const {
 
-    title,
     anchor1,
     anchor2,
     description1,
     description2,
     description3,
+    title,
 
 } = Astro.props
 
@@ -22,14 +21,14 @@ const {
     <h2 class="text-6xl font-thin text-center">{ title }</h2>
     <br><br>
     <div class="text-center">
-        <Anchor2>{ anchor1 }</Anchor2> | 
+        <Anchor2>{ anchor1 }</Anchor2> |
         <Anchor2>{ anchor1 }</Anchor2> |
         <Anchor2>{ anchor1 }</Anchor2> |
         <Anchor2>{ anchor1 }</Anchor2>
     </div>
     <br>
     <p class="text-center">{ description1 }</p>
-    
+
     <div class="pl-9 pb-14 pt-0 ">
         <p class="text-xl font-thin p-3"><Anchor2>{ anchor2 }</Anchor2></p>
         <p class="text-xl font-thin p-3"><Anchor2>{ anchor2 }</Anchor2></p>
@@ -38,12 +37,12 @@ const {
         <p class="text-xl font-thin p-3"><Anchor2>{ anchor2 }</Anchor2></p>
     </div>
 
-    
+
     <div class="flex-row">
         <h3 class="text-lg font-thin text-left">{ description2 }</h3>
         <p class="font-thin text-left">{ description3 }</p>
     </div>
-    
+
     <div class="text-right space-x-3 text-xl pb-3 ">
         <i class="fa-brands fa-facebook-f hover:text-red-400"></i>
         <i class="fa-brands fa-x-twitter hover:text-red-400"></i>
@@ -53,4 +52,3 @@ const {
         <i class="fa-brands fa-youtube hover:text-red-400"></i>
     </div>
 </section>
-

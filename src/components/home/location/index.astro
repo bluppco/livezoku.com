@@ -1,10 +1,11 @@
 ---
 
-// IMPORT ASTRO ATOMS
-import Paragraph from "@/atoms/paragraph/index.astro";
-import Heading2 from "@/atoms/heading2/index.astro";
-import Anchor from "@/atoms/anchor/index.astro";
+// IMPORTS ASTRO COMPONENTS
+import CountryCity from "@/components/home/location/country-city/index.astro"
 
+// IMPORT ASTRO ATOMS
+import Heading2 from "@/atoms/headings/two/index.astro"
+import Paragraph from "@/atoms/paragraph/xl/center/index.astro"
 
 // GET ASTRO PROPS
 const {
@@ -12,41 +13,35 @@ const {
     title,
     description1,
     description2,
-    heading1,
+    heading,
 
 } = Astro.props
 
 ---
 
-
-<br><br>
-<Heading2>{ title }</Heading2>
-<br>
-<Paragraph>{ description1 }</Paragraph>
-<br><br>
-
-<section class="flex justify-center space-x-4">
-    <div class="p-4 text-center items-center">
-        <Anchor>{ heading1 }</Anchor>
-        <br>
-        <Paragraph>{ description2 }</Paragraph>
-    </div>
-
-    <div class="p-4 text-center items-center">
-        <Anchor>{ heading1 }</Anchor>
-        <br>
-        <Paragraph>{ description2 }</Paragraph>
-    </div>
-
-    <div class="p-4 text-center items-center">
-        <Anchor>{ heading1 }</Anchor>
-        <br>
-        <Paragraph>{ description2 }</Paragraph>
-    </div>
-
-    <div class="p-4 text-center items-center">
-        <Anchor>{ heading1 }</Anchor>
-        <br>
-        <Paragraph>{ description2 }</Paragraph>
-    </div>
+<section class="py-10 space-y-4">
+    <Heading2>{ title }</Heading2>
+    <Paragraph>{ description1 }</Paragraph>
+    <section class="flex justify-center space-x-4 py-4">
+        <CountryCity
+            description={ description2 }
+            heading={ heading }
+            href=""
+        />
+        <CountryCity
+            description={ description2 }
+            heading={ heading }
+            href=""
+        />
+        <CountryCity
+            description={ description2 }
+            heading={ heading }
+            href=""
+        />
+        <CountryCity
+            description={ description2 }
+            heading={ heading }
+            href=""
+        />
+    </section>
 </section>
