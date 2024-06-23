@@ -1,38 +1,37 @@
 ---
 
 // IMPORT ASTRO ATOMS
-import Heading3 from "@/atoms/heading3/index.astro";
-import Paragraph3 from "@/atoms/paragraph3/index.astro";
-import Button2 from "@/atoms/button2/index.astro";
+import ButtonTransparent from "@/atoms/buttons/transparent/index.astro"
+import HeadingThree from "@/atoms/headings/three/index.astro"
+import ParagraphRegularCenterWhite from "@/atoms/paragraph/regular/center/white/index.astro"
 
 // GET ASTRO PROPS
 const {
 
-    title,
-    button,
+    button_text,
     description,
+    title,
 
 } = Astro.props
 
 ---
 
-<div class="bg-blue-300 h-100 py-12">
+<section class="bg-blue-300 h-100 py-12">
     <div class="flex">
-        <div>
-            <Heading3>{ title }</Heading3>
-            <br><br>
-            <Paragraph3>{ description }</Paragraph3>
-            <br><br>
-            <div class="justify-center items-center flex">
-            <Button2>{ button }</Button2>
+        <div class="space-y-6">
+            <HeadingThree>{ title }</HeadingThree>
+            <ParagraphRegularCenterWhite>{ description }</ParagraphRegularCenterWhite>
+            <div class="flex justify-center items-center">
+                <ButtonTransparent>{ button_text }</ButtonTransparent>
             </div>
         </div>
     <div>
-            <br><br><br>
-            <Paragraph3>Certified</Paragraph3>
-            <div>
-                <img src="/img.jpeg" alt="Image" class="rounded-full max-h-80 max-w-72 pr-6 pb-9">
-            </div>
-
-</div>
-
+    <ParagraphRegularCenterWhite>Certified</ParagraphRegularCenterWhite>
+    <div>
+        <img
+            alt="Image"
+            class="w-full h-full"
+            src="/img.jpeg"
+        />
+    </div>
+</section>

@@ -1,0 +1,81 @@
+---
+
+// IMPORT ASTRO COLLECTION
+import { getCollection } from 'astro:content'
+
+// IMPORT FOOTER COLUMN ONE COLLECTION
+let footer_column_one = await getCollection('footer-column-two')
+footer_column_one = footer_column_one.sort((a, b) => a.data.order - b.data.order).filter( ( item ) => item.data.live )
+
+// IMPORT ASTRO COMPONENTS
+import CustomerReview from "@/components/home/customer-review/index.astro"
+import Featured from "@/components/home/featured/index.astro"
+import FollowUs from "@/components/home/follow-us/index.astro"
+import Footer from "@/components/home/footer/index.astro"
+import Footerr from "@/components/common/footer/index.astro"
+import Header from "@/components/Header/index.astro"
+import Location from "@/components/home/location/index.astro"
+import Meetandconnect from "@/components/home/meet-and-connect/index.astro"
+import PickYourPurpose from "@/components/home/pick-your-purpose/index.astro"
+import Subscribe from "@/components/home/subscribe/index.astro"
+import Sustainabitity from "@/components/home/sustainability effort/index.astro"
+import Welcome from "@/components/home/welcome/index.astro"
+
+---
+<Header />
+<Welcome
+    description="We're Zoku. Designed for the new generation of business travelers, we’re so much more than a long stay hotel. We’re a place you can call your second home, even on your first visit. We’ve created a hive of private Lofts and rooftop Social Spaces, so you can stay connected and well rested as you live and work throughout Europe. Throw yourself into your work and play, and effortlessly discover one of our home cities. It will be your home city next."
+    sub_title="Discover a new kind of business hotel in Europe's most livable cities"
+    title="Welcome to Zoku"
+/>
+<Featured
+    description1="10 Stunning Apartment Hotels Around the World"
+    description2="10 Stunning Apartment Hotels Around the World"
+    description3="10 Stunning Apartment Hotels Around the World"
+    description4="10 Stunning Apartment Hotels Around the World"
+    description5="Europe's Best Hotels for Business Travel"
+/>
+<Sustainabitity
+    button_text="OUR SUSTAINABILITY EFFORTS"
+    description="In 2018, Zoku Amsterdam received the B Corp certification, making us the first B Corp certified hospitality company in the Netherlands. Certified B Corporations are businesses that meet the highest standards of verified social and environmental performance, public transparency, and legal accountability to balance profit and purpose. "
+    title="We're a proud B Corp"
+/>
+<Meetandconnect
+    button_text="MEETING AND EVENTS AT ZOKU"
+    description1="Fuel connections, spark ideas, and drive productivity."
+    description2="Our rooftop meeting rooms and large event space are designed to fuel connections, spark ideas, and drive productivity. The areas are flooded with natural light and have amazing views overlooking the city."
+    title="MEET & CELEBRATE"
+/>
+<CustomerReview
+    description1="“At first glance, Zoku appears to be just another hotel with spacious rooms, a creative marketing team, and some great puns on its coffee mugs. But taking a closer look – there is so much more to unpack. I have been living and working here for a little over a month now, and I have been wowed by the sense of belonging and community this place conveys. So much so, that I have extended my stay by another month. It’s truly the best place to land in when moving to a city like Amsterdam, much of which is owed to the people that work here alongside everyone who decides to come back here to work remotely, day after day. It nails down a perfect balance between being an atmosphere that fosters creativity and productivity.”"
+    description2="-Chris, Relocation at Zoku Amsterdam"
+    title="Don't just take our word for it..."
+/>
+<PickYourPurpose
+    title="PICK YOUR PURPOSE"
+    title1="TEAM RETREATS AT ZOKU"
+    title2="Group Bookings At Zoku"
+/>
+<Location
+    description1="Find us in Europe's most livable cities"
+    description2="Netherlands"
+    heading="Amsterdam"
+    title="LOCATIONS"
+/>
+<FollowUs />
+<Subscribe
+    button_text="Subscribe"
+    description="Sign up to get up to 15% off your next stay – with exclusive overnight stay, meeting, and event offers right to your inbox!"
+    title="Ready To Live Zoku? Subscribe For 15% Off!"
+/>
+<Footer
+    anchor1="Amsterdam"
+    anchor2="Sustainability"
+    description1="and more to come..."
+    description2="© 2024 ZOKU"
+    description3="Website by The blupp"
+    title="Zoku"
+/>
+<Footerr
+    footer_column_one={ footer_column_one }
+/>

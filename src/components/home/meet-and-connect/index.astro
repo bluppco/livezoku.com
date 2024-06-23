@@ -1,0 +1,63 @@
+---
+
+// IMPORT ASTRO COMPONENTS
+import ImageTitleDescriptionButton from "@/components/home/meet-and-connect/image-title-description-button/index.astro"
+
+// GET ASTRO PROPS
+const {
+
+    button_text,
+    description1,
+    description2,
+    title,
+
+} = Astro.props
+
+---
+<section>
+    <ImageTitleDescriptionButton
+        alternative_text="image"
+        button_text={ button_text }
+        description1={ description1 }
+        description2={ description2 }
+        is_right={ false }
+        source="/img.jpeg"
+        title={ title }
+    />
+    <ImageTitleDescriptionButton
+        alternative_text="image"
+        button_text={ button_text }
+        description1={ description1 }
+        description2={ description2 }
+        is_right={ true }
+        source="/img.jpeg"
+        title={ title }
+    />
+    <ImageTitleDescriptionButton
+        alternative_text="image"
+        button_text={ button_text }
+        description1={ description1 }
+        description2={ description2 }
+        is_right={ false }
+        source="/img.jpeg"
+        title={ title }
+    />
+    <ImageTitleDescriptionButton
+        alternative_text="image"
+        button_text={ button_text }
+        description1={ description1 }
+        description2={ description2 }
+        is_right={ true }
+        source="/img.jpeg"
+        title={ title }
+    />
+    <ImageTitleDescriptionButton
+        alternative_text="image"
+        button_text={ button_text }
+        description1={ description1 }
+        description2={ description2 }
+        is_right={ false }
+        source="/img.jpeg"
+        title={ title }
+    />
+</section>

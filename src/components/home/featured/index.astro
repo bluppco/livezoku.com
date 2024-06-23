@@ -1,9 +1,10 @@
 ---
 
+// IMPORT ASTRO COMPONENTS
+import News from "@/components/home/featured/news/index.astro"
+
 // IMPORT ASTRO ATOMS
-import Paragraph2 from "@/atoms/paragraph2/index.astro";
-import Heading2 from "@/atoms/heading2/index.astro";
-import Div1 from "@/atoms/div1/index.astro";
+import HeadingTwo from "@/atoms/headings/two/index.astro"
 
 // GET ASTRO PROPS
 const {
@@ -18,42 +19,33 @@ const {
 
 ---
 
-<Heading2>AS FEATURED IN</Heading2>
-<br>
-<section class="flex">
-    <div class="p-4">
-        <Div1>
-            <img src="/img.jpeg" alt="Image" class="h-30 w-20">
-        </Div1>
-        <br>
-        <Paragraph2>{ description1 }</Paragraph2>
-    </div>
-    <div class="p-4">
-        <Div1>
-            <img src="/img.jpeg" alt="Image" class="h-30 w-20">
-        </Div1>
-        <br>
-        <Paragraph2>{ description2 }</Paragraph2>
-    </div>
-    <div class="p-4">
-        <Div1>
-            <img src="/img.jpeg" alt="Image" class="h-30 w-20">
-        </Div1>
-        <br>
-        <Paragraph2>{ description3 }</Paragraph2>
-    </div>
-    <div class="p-4">
-        <Div1>
-            <img src="/img.jpeg" alt="Image" class="h-30 w-20">
-        </Div1>
-        <br>
-        <Paragraph2>{ description4 }</Paragraph2>
-    </div>
-    <div class="p-4">
-        <Div1>
-            <img src="/img.jpeg" alt="Image" class="h-30 w-20">
-        </Div1>
-        <br>
-        <Paragraph2>{ description5 }</Paragraph2>
-    </div>
+<section class="space-y-8">
+    <HeadingTwo>AS FEATURED IN</HeadingTwo>
+    <section class="flex">
+        <News
+            alternative_text="Image"
+            description={ description1 }
+            source="/img.jpeg"
+        />
+        <News
+            alternative_text="Image"
+            description={ description2 }
+            source="/img.jpeg"
+        />
+        <News
+            alternative_text="Image"
+            description={ description3 }
+            source="/img.jpeg"
+        />
+        <News
+            alternative_text="Image"
+            description={ description4 }
+            source="/img.jpeg"
+        />
+        <News
+            alternative_text="Image"
+            description={ description5 }
+            source="/img.jpeg"
+        />
+    </section>
 </section>

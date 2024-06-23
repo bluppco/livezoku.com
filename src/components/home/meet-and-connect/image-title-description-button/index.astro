@@ -1,0 +1,36 @@
+---
+
+// IMPORTS ASTRO ATOMS
+import ButtonDropdown from "@/atoms/buttons/dropdown/index.astro"
+import HeadingFour from "@/atoms/headings/four/index.astro"
+import ParagraphXl from "@/atoms/paragraph/xl/index.astro"
+
+// GET ASTRO PROPS
+const {
+
+    alternative_text,
+    button_text,
+    description1,
+    description2,
+    is_right,
+    source,
+    title,
+
+} = Astro.props
+
+---
+<div class="flex">
+    <div class={` ${ is_right ? "md:order-last" : "" } max-h-screen max-w-xl pt-4 `}>
+        <img
+            alt={ alternative_text }
+            class="w-full h-full"
+            src={ source }
+        />
+    </div>
+    <div class="ml-10 space-y-4">
+        <HeadingFour>{ title }</HeadingFour>
+        <ParagraphXl>{ description1 }</ParagraphXl>
+        <ParagraphXl>{ description2 }</ParagraphXl>
+        <ButtonDropdown>{ button_text }</ButtonDropdown>
+    </div>
+</div>
