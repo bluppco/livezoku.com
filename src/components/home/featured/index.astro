@@ -19,9 +19,13 @@ const {
 
 ---
 
-<section class="space-y-8">
-    <HeadingTwo>AS FEATURED IN</HeadingTwo>
-    <section class="flex">
+<section class="space-y-8 mb-10">
+    <div class="relative flex py-5 items-center">
+        <div class="flex-grow ml-4 border-black border-t-2"></div>
+        <HeadingTwo>AS FEATURED IN</HeadingTwo>
+        <div class="flex-grow mr-4 border-black border-t-2"></div>
+    </div>
+    <section class="grid sm:grid-cols-3 md:grid-cols-5">
         <News
             alternative_text="Image"
             description={ description1 }

@@ -9,8 +9,13 @@ import HeadingTwo from "@/atoms/headings/two/index.astro"
 ---
 
 <section>
-    <HeadingTwo>Follow Us</HeadingTwo>
-    <div class="flex">
+    <div class="relative flex py-4 items-center">
+        <div class="flex-grow ml-4 border-black border-t-2"></div>
+        <HeadingTwo>Follow Us</HeadingTwo>
+        <div class="flex-grow mr-4 border-black border-t-2"></div>
+    </div>
+    
+    <div class="grid sm:grid-cols-2 md:grid-cols-4 mt-10 mb-20">
         <InstagramPost
             alternative_text=""
             href=""

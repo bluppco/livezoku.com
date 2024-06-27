@@ -4,7 +4,7 @@
 import CountryCity from "@/components/home/location/country-city/index.astro"
 
 // IMPORT ASTRO ATOMS
-import Heading2 from "@/atoms/headings/two/index.astro"
+import HeadingTwo from "@/atoms/headings/two/index.astro"
 import Paragraph from "@/atoms/paragraph/xl/center/index.astro"
 
 // GET ASTRO PROPS
@@ -20,9 +20,14 @@ const {
 ---
 
 <section class="py-10 space-y-4">
-    <Heading2>{ title }</Heading2>
+    <div class="relative flex py-2 items-center">
+        <div class="flex-grow ml-4 border-black border-t-2"></div>
+        <HeadingTwo>{ title }</HeadingTwo>
+        <div class="flex-grow mr-4 border-black border-t-2"></div>
+    </div>
+    
     <Paragraph>{ description1 }</Paragraph>
-    <section class="flex justify-center space-x-4 py-4">
+    <section class="grid md:grid-cols-4 justify-center space-x-4 py-4">
         <CountryCity
             description={ description2 }
             heading={ heading }

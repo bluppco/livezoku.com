@@ -8,21 +8,16 @@ const {
 
     alternative_text,
     source,
-    title,
 
 } = Astro.props
 
 ---
-<div class="relative max-w-xl mx-auto mt-15">
+<div class="relative max-w-xl mx-auto">
     <div class="rounded-md ">
         <img
             alt={ alternative_text }
-            class="h-full w-full object-cover p-4"
+            class="h-full w-full p-4"
             src={ source }
         />
-    </div>
-    <div class="absolute inset-0 bg-gray-700 opacity-60 rounded-md m-4" />
-    <div class="absolute inset-0 flex items-center justify-center">
-        <HeadingThree>{ title }</HeadingThree>
     </div>
 </div>

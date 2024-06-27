@@ -1,9 +1,9 @@
 ---
 
 // IMPORT ASTRO ATOMS
-import Paragraph3 from "@/atoms/paragraph3/index.astro";
+import ButtonRed from "@/atoms/buttons/red/index.astro"
+import ParagraphRegularCenterWhite from "@/atoms/paragraph/regular/center/white/index.astro";
 import Anchor1 from "@/atoms/anchor1/index.astro";
-import Button3 from "@/atoms/button3/index.astro";
 
 // GET ASTRO PROPS
 const {
@@ -15,5 +15,61 @@ const {
 } = Astro.props
 
 ---
+
+
+<div class="top-8 absolute h-28 w-full p-4 text-center ">
+    <ul class="space-x-8 flex justify-between">
+
+        <div class="space-x-2 flex">
+            
+        <li class="group cursor-pointer">
+            <div class="">
+                <i class="fa-solid fa-bars text-3xl text-white"></i>
+                <p class="text-white">Menu<i class="fa-solid fa-caret-down p-2"></i></p>
+                <ul class="invisible group-hover:visible box-border border-2 font-thin bg-transparent px-4">
+                    <li class="text-white py-1 hover:text-red-400">AMSTERDAM</li>
+                    <li class="text-white py-1 hover:text-red-400">COPENHAGEN</li>
+                    <li class="text-white py-1 hover:text-red-400">PARIS</li>
+                    <li class="text-white py-1 hover:text-red-400">VIENNA</li>
+                </ul>
+            </div>
+        </li>
+        
+    
+            <li class="group cursor-pointer">
+                <div class="">
+                    <i class="fa-solid fa-location-dot text-3xl text-white"></i>
+                    <p class="text-white">Location<i class="fa-solid fa-caret-down p-2"></i></p>
+                    <ul class="invisible group-hover:visible box-border border-2 font-thin bg-transparent px-4">
+                        <li class="text-white py-1 hover:text-red-400">AMSTERDAM</li>
+                        <li class="text-white py-1 hover:text-red-400">COPENHAGEN</li>
+                        <li class="text-white py-1 hover:text-red-400">PARIS</li>
+                        <li class="text-white py-1 hover:text-red-400">VIENNA</li>
+                    </ul>
+                </div>
+            </li>
+        </div>
+
+
+                
+
+        <li class="flex-grow-2 md:flex-grow-4 text-5xl text-center text-white">Zoku</li>
+
+        <li class="group cursor-pointer"><ButtonRed>Book Now<i class="fa-solid fa-caret-down p-4"></i></ButtonRed>
+            <ul class="invisible group-hover:visible font-thin bg-white group-hover:box-border border-2 mr-8">
+                <li class="py-2 hover:text-red-400">AMSTERDAM</li>
+                <li class="py-2 hover:text-red-400">COPENHAGEN</li>
+                <li class="py-2 hover:text-red-400">PARIS</li>
+                <li class="py-2 hover:text-red-400">VIENNA</li>
+            </ul>
+        </li>
+
+    </ul> 
+
+
+
+
+</div>
+
 
 

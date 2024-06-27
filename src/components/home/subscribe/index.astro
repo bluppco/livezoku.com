@@ -1,9 +1,9 @@
 ---
 
 // IMPORT ASTRO ATOMS
-import ButtonRed from "@/atoms/buttons/red/index.astro"
+import ButtonRed2 from "@/atoms/buttons/red2/index.astro"
 import HeadingTwo from "@/atoms/headings/two/index.astro"
-import Paragraph from "@/atoms/paragraph/xl/center/index.astro"
+import ParagraphXlCenter from "@/atoms/paragraph/xl/center/index.astro"
 
 // GET ASTRO PROPS
 const {
@@ -19,19 +19,19 @@ const {
 <section class="bg-orange-100 h-100">
     <div class="pt-12 space-y-8">
         <HeadingTwo>{ title }</HeadingTwo>
-        <Paragraph>{ description }</Paragraph>
-        <div class="text-center pb-8 space-x-5">
+        <ParagraphXlCenter>{ description }</ParagraphXlCenter>
+        <div class="text-center grid-flow-row sm:grid-flow-col pb-8 space-x-5 space-y-4">
             <input
-                class="relative items-center justify-center py-2 px-12 text-gray bg-white"
+                class="relative items-center text-center font-thin justify-center py-2 px-10 text-gray bg-white"
                 placeholder="First Name"
                 type="text"
             />
             <input
-                class="relative items-center justify-center py-2 px-12 text-gray bg-white"
+                class="relative items-center text-center font-thin justify-center py-2 px-10 text-gray bg-white"
                 placeholder="Email"
                 type="text"
             />
-            <ButtonRed>{ button_text }</ButtonRed>
+            <ButtonRed2>{ button_text }</ButtonRed2>
         </div>
     </div>
 </section>

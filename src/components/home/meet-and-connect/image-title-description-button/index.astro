@@ -3,7 +3,7 @@
 // IMPORTS ASTRO ATOMS
 import ButtonDropdown from "@/atoms/buttons/dropdown/index.astro"
 import HeadingFour from "@/atoms/headings/four/index.astro"
-import ParagraphXl from "@/atoms/paragraph/xl/index.astro"
+import ParagraphRegular from "@/atoms/paragraph/regular/index.astro"
 
 // GET ASTRO PROPS
 const {
@@ -19,7 +19,7 @@ const {
 } = Astro.props
 
 ---
-<div class="flex">
+<div class="grid md:grid-cols-2">
     <div class={` ${ is_right ? "md:order-last" : "" } max-h-screen max-w-xl pt-4 `}>
         <img
             alt={ alternative_text }
@@ -27,10 +27,10 @@ const {
             src={ source }
         />
     </div>
-    <div class="ml-10 space-y-4">
+    <div class="ml-10 space-y-4 mb-20 p-4">
         <HeadingFour>{ title }</HeadingFour>
-        <ParagraphXl>{ description1 }</ParagraphXl>
-        <ParagraphXl>{ description2 }</ParagraphXl>
-        <ButtonDropdown>{ button_text }</ButtonDropdown>
+        <ParagraphRegular>{ description1 }</ParagraphRegular>
+        <ParagraphRegular>{ description2 }</ParagraphRegular>
+        <ButtonDropdown>{ button_text }<i class="fa-solid fa-caret-down p-2"></i></ButtonDropdown>
     </div>
 </div>

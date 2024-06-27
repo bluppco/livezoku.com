@@ -13,16 +13,23 @@ import Featured from "@/components/home/featured/index.astro"
 import FollowUs from "@/components/home/follow-us/index.astro"
 import Footer from "@/components/home/footer/index.astro"
 import Footerr from "@/components/common/footer/index.astro"
-import Header from "@/components/Header/index.astro"
+import Hero from "@/components/home/hero/index.astro"
 import Location from "@/components/home/location/index.astro"
 import Meetandconnect from "@/components/home/meet-and-connect/index.astro"
 import PickYourPurpose from "@/components/home/pick-your-purpose/index.astro"
+import SportSummerInParis from "@/components/home/sports-summer-in-paris/index.astro"
 import Subscribe from "@/components/home/subscribe/index.astro"
 import Sustainabitity from "@/components/home/sustainability effort/index.astro"
 import Welcome from "@/components/home/welcome/index.astro"
 
 ---
-<Header />
+
+
+<Hero
+		description2="Netherlands"
+		heading1="Amsterdam"
+		button_text="Book Now"
+/>
 <Welcome
     description="We're Zoku. Designed for the new generation of business travelers, we’re so much more than a long stay hotel. We’re a place you can call your second home, even on your first visit. We’ve created a hive of private Lofts and rooftop Social Spaces, so you can stay connected and well rested as you live and work throughout Europe. Throw yourself into your work and play, and effortlessly discover one of our home cities. It will be your home city next."
     sub_title="Discover a new kind of business hotel in Europe's most livable cities"
@@ -56,6 +63,11 @@ import Welcome from "@/components/home/welcome/index.astro"
     title1="TEAM RETREATS AT ZOKU"
     title2="Group Bookings At Zoku"
 />
+<SportSummerInParis
+    button_text="FIND OUT MORE"
+    title="SPORT SUMMER IN PARIS"
+    sub_title="Join our rooftop live streams, host a private watch party, or book a pop-up content studio. There's literally something fun for everyone!"
+/>
 <Location
     description1="Find us in Europe's most livable cities"
     description2="Netherlands"
@@ -76,6 +88,6 @@ import Welcome from "@/components/home/welcome/index.astro"
     description3="Website by The blupp"
     title="Zoku"
 />
-<Footerr
+<!-- <Footerr
     footer_column_one={ footer_column_one }
-/>
+/> -->
