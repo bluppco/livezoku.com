@@ -1,9 +1,11 @@
-<button class="group cursor-pointer px-6 py-2 outline outline-2 outline-offset-2 text-black text-center font-thin hover:bg-gray-200 ">
+<button class="absolute group cursor-pointer px-4 outline outline-2 outline-offset-2 text-black text-center font-extralight hover:bg-gray-200">
     <slot/>
-    <ul class="invisible group-hover:visible font-thin bg-white group-hover:box-border border-2">
-        <li class="py-2 hover:text-red-400">AMSTERDAM</li>
-        <li class="py-2 hover:text-red-400">COPENHAGEN</li>
-        <li class="py-2 hover:text-red-400">PARIS</li>
-        <li class="py-2 hover:text-red-400">VIENNA</li>
-    </ul>
+    <div class="justify-start">
+        <ul class="relative hidden group-hover:block font-thin bg-white">
+            <li class="py-2 hover:text-red-400">AMSTERDAM</li>
+            <li class="py-2 hover:text-red-400">COPENHAGEN</li>
+            <li class="py-2 hover:text-red-400">PARIS</li>
+            <li class="py-2 hover:text-red-400">VIENNA</li>
+        </ul>
+    </div>
 </button>

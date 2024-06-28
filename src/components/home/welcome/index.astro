@@ -1,7 +1,7 @@
 ---
 
 // IMPORT ASTRO ATOMS
-import Paragraph from "@/atoms/paragraph/xl/center/index.astro"
+import ParagraphRegularCenter from "@/atoms/paragraph/regular/center/index.astro"
 import HeadingOne from "@/atoms/headings/one/index.astro"
 
 // GET ASTRO PROPS
@@ -15,8 +15,8 @@ const {
 
 ---
 
-<section class="space-y-8 mx-5 px-10 py-12">
+<section class="space-y-8 py-12">
     <HeadingOne>{ title }</HeadingOne>
-    <Paragraph>{ sub_title }</Paragraph>
-    <Paragraph>{ description }</Paragraph>
+    <ParagraphRegularCenter>{ sub_title }</ParagraphRegularCenter>
+    <ParagraphRegularCenter>{ description }</ParagraphRegularCenter>
 </section>
