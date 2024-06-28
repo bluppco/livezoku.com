@@ -29,6 +29,42 @@ const {
 		<meta property="twitter:image" content={ image } />
 		<link rel="icon" type="image/x-icon" href="/favicon.svg">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+		<!-- Carousel -->
+		<style>
+				html,
+				body {
+				position: relative;
+				height: 100%;
+				}
+				body {
+				background: #eee;
+				font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+				font-size: 14px;
+				color: #000;
+				margin: 0;
+				padding: 0;
+				}
+				.swiper {
+				width: 100%;
+				height: 100%;
+				}
+				.swiper-slide {
+				text-align: center;
+				font-size: 18px;
+				background: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				}
+				.swiper-slide img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				}
+			</style>
+			<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+			<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
 	</head>
 	<body>
 		<slot />
