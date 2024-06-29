@@ -1,7 +1,7 @@
 ---
 
 // IMPORT ASTRO ATOMS
-import HeadingTwo from "@/atoms/headings/two/index.astro"
+import HeadingFive from "@/atoms/headings/five/index.astro"
 import ParagraphRegularCenter from "@/atoms/paragraph/regular/center/index.astro"
 
 // GET ASTRO PROPS
@@ -15,17 +15,19 @@ const {
 
 ---
 
-<div class="bg-gray-200 h-90 ">
+<div class="bg-gray-200">
     <div class="sm:flex p-4">
-        <div class="px-6 py-10 max-h-screen max-w-screen-sm">
+        <div class="px-6 py-10">
             <img
                 alt="Image"
-                class="w-screen h-60 rounded-full"
+                class="w-dvw h-60 rounded-full"
                 src="/img.jpeg"
             />
         </div>
         <div class="pt-9 space-y-8">
-            <HeadingTwo>{ title }</HeadingTwo>
+            <div class="pb-6">
+                <HeadingFive>{ title }</HeadingFive>
+            </div>
             <ParagraphRegularCenter>{ description1 }</ParagraphRegularCenter>
             <ParagraphRegularCenter>{ description2 }<ParagraphRegularCenter>
         </div>

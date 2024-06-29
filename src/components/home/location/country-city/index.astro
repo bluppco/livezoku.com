@@ -1,8 +1,8 @@
 ---
 
 // IMPORTS ASTRO ATOMS
-import ParagraphXlCenter from "@/atoms/paragraph/xl/center/index.astro"
-import Anchor from "@/atoms/anchor/index.astro"
+import ParagraphRegular from "@/atoms/paragraph/regular/index.astro"
+import Heading from "@/atoms/anchor/index.astro"
 
 // GET ASTRO PROPS
 const {
@@ -15,8 +15,6 @@ const {
 
 ---
 <div class="p-4 text-center items-center space-y-4">
-    <a href={ href }>
-        <Anchor>{ heading }</Anchor>
-    </a>
-    <ParagraphXlCenter>{ description }</ParagraphXlCenter>
+    <Heading>{ heading }</Heading>
+    <ParagraphRegular>{ description }</ParagraphRegular>
 </div>
