@@ -29,7 +29,7 @@ const {
 
 ---
 
-<div class="top-8 absolute w-full p-4 text-center">
+<div class="top-8 absolute w-full p-4 text-center sm:invisible md:visible">
     <ul class="flex justify-between">
         <div class="space-x-2 flex">
         <!-- Menu -->
@@ -65,7 +65,34 @@ const {
         </li>
     </ul> 
 </div>
-
+<!-- Responsive Header -->
+<div class="top-8 absolute w-full p-4 text-center sm:visible md:hidden">
+    <ul class="flex justify-between">
+        <div class="space-x-2 flex">
+        <!-- Location -->
+        <li class="group cursor-pointer">
+            <div class="">
+                <i class="fa-solid fa-location-dot text-3xl text-white"></i>
+                <ParagraphXlWhite>{ sidetitle2 }<i class="fa-solid fa-caret-down p-2"></i></ParagraphXlWhite>
+                <ul class="invisible group-hover:visible box-border border-2 font-thin bg-transparent px-4">
+                    <White>{ sidetitle2_description1 }</White>
+                    <White>{ sidetitle2_description2 }</White>
+                    <White>{ sidetitle2_description3 }</White>
+                    <White>{ sidetitle2_description4 }</White>
+                </ul>
+            </div>
+        </li>
+        </div>
+        <!-- Title -->
+        <WiderText>{ title }</WiderText>
+        <!-- Menu -->
+        <li class="group cursor-pointer">
+            <div class="">
+                <i class="fa-solid fa-bars text-3xl text-white"></i>
+            </div>
+        </li>
+    </ul> 
+</div>
 
 <!-- <script>
     document.addEventListener("scroll" , ()=>{
@@ -77,4 +104,3 @@ const {
         }
     });
 </script>  -->
-
