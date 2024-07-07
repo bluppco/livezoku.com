@@ -7,8 +7,6 @@ import Regular from "@/atoms/hover/regular/index.astro"
 import White from "@/atoms/hover/white/index.astro"
 import WiderText from "@/atoms/list/widertext/index.astro"
 
-
-
 // GET ASTRO PROPS
 const {
 
@@ -29,7 +27,7 @@ const {
 
 ---
 
-<div class="top-8 absolute w-full p-4 text-center sm:invisible md:visible">
+<header class="top-8 absolute w-full p-4 sm:hidden md:block">
     <ul class="flex justify-between">
         <div class="space-x-2 flex">
         <!-- Menu -->
@@ -55,20 +53,20 @@ const {
         </div>
         <!-- Button -->
         <WiderText>{ title }</WiderText>
-        <li class="group cursor-pointer"><ButtonRed>{ button_text }<i class="fa-solid fa-caret-down p-4"></i></ButtonRed>
+        <div class="group cursor-pointer"><ButtonRed>{ button_text }<i class="fa-solid fa-caret-down p-4"></i></ButtonRed>
             <ul class="invisible group-hover:visible font-thin bg-white group-hover:box-border border-2 mr-8">
                 <Regular>{ button_description1 }</Regular>
                 <Regular>{ button_description2 }</Regular>
                 <Regular>{ button_description3 }</Regular>
                 <Regular>{ button_description4 }</Regular>
             </ul>
-        </li>
+        </div>
     </ul> 
-</div>
+</header>
 <!-- Responsive Header -->
 <div class="top-8 absolute w-full p-4 text-center sm:visible md:hidden">
     <ul class="flex justify-between">
-        <div class="space-x-2 flex">
+        <div class="flex gap-2">
         <!-- Location -->
         <li class="group cursor-pointer">
             <div class="">

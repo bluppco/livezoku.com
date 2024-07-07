@@ -14,6 +14,8 @@ const {
     description3,
     description4,
     description5,
+    description6,
+    description7,
     title
 
 } = Astro.props
@@ -26,31 +28,54 @@ const {
         <HeadingTwo>{ title }</HeadingTwo>
         <div class="flex-grow mr-4 border-black border-t-2"></div>
     </div>
-    <section class="grid sm:grid-cols-3 md:grid-cols-5">
+    <section class="grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7">
         <News
             alternative_text="Image"
             description={ description1 }
-            source="/img.jpeg"
+            source="/images/Featured_img1.png"
         />
         <News
             alternative_text="Image"
             description={ description2 }
-            source="/img.jpeg"
+            source="/images/Featured_img2.png"
         />
         <News
             alternative_text="Image"
             description={ description3 }
-            source="/img.jpeg"
+            source="/images/Featured_img3.jpg"
         />
         <News
             alternative_text="Image"
             description={ description4 }
-            source="/img.jpeg"
+            source="/images/Featured_img4.png"
         />
         <News
             alternative_text="Image"
             description={ description5 }
-            source="/img.jpeg"
+            source="/images/Featured_img5.png"
+        />
+        <News
+            alternative_text="Image"
+            description={ description6 }
+            source="/images/Featured_img6.jpg"
+        />
+        <News
+            alternative_text="Image"
+            description={ description7 }
+            source="/images/Featured_img7.png"
         />
     </section>
 </section>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    });
+</script>

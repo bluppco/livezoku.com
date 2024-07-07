@@ -5,6 +5,9 @@ import ButtonDropdown from "@/atoms/buttons/dropdown/index.astro"
 import HeadingFour from "@/atoms/headings/four/index.astro"
 import ParagraphRegular from "@/atoms/paragraph/regular/index.astro"
 
+// IMPORTS CUSTOM CSS
+import CUSTOMCSS from "@/style/custom.css"
+
 // GET ASTRO PROPS
 const {
 
@@ -87,10 +90,6 @@ const {
         autoplay: {
             delay: 2500,
             disableOnInteraction: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
         },
     });
 </script>

@@ -1,7 +1,7 @@
-<button class="absolute font-sans text-ellipsis group cursor-pointer px-4 outline outline-2 outline-offset-2 text-black text-center font-thin hover:bg-gray-200">
+<button class="relative font-sans text-ellipsis group cursor-pointer px-4 z-10 outline text-black text-center font-thin">
     <slot/>
-    <div class="justify-start">
-        <ul class="relative hidden group-hover:block font-thin bg-white">
+    <div class="text-left">
+        <ul class="absolute hidden group-hover:block font-thin outline bg-white pl-5 pr-40 -ml-4">
             <li class="py-2 hover:text-red-400">AMSTERDAM</li>
             <li class="py-2 hover:text-red-400">COPENHAGEN</li>
             <li class="py-2 hover:text-red-400">PARIS</li>
