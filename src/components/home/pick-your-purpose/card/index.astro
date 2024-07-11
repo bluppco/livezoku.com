@@ -13,15 +13,15 @@ const {
 } = Astro.props
 
 ---
-<div class="relative max-w-xl mx-auto mt-15">
-    <div class="rounded-md">
+<div class="relative mx-auto mt-15">
+    <div class="rounded-md px-2 lg:px-4">
         <img
             alt={ alternative_text }
-            class="h-full w-full object-cover p-2"
+            class="h-full w-full object-cover"
             src={ source }
         />
     </div>
-    <div class="absolute inset-0 bg-gray-700 opacity-60 rounded-md m-2" />
+    <div class="absolute inset-0 bg-gray-600 opacity-60 rounded-md mx-2 lg:mx-4" />
     <div class="absolute inset-0 flex items-center justify-center">
         <HeadingThree>{ title }</HeadingThree>
     </div>
