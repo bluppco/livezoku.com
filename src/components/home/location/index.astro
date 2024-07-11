@@ -10,10 +10,16 @@ import Paragraph from "@/atoms/paragraph/xl/center/index.astro"
 // GET ASTRO PROPS
 const {
 
-    title,
     description1,
-    description2,
-    heading,
+    heading1,
+    heading2,
+    heading3,
+    heading4,
+    heading1_desc1,
+    heading2_desc1,
+    heading3_desc1,
+    heading4_desc1,
+    title
 
 } = Astro.props
 
@@ -25,27 +31,26 @@ const {
         <HeadingTwo>{ title }</HeadingTwo>
         <div class="flex-grow mr-4 border-black border-t-2"></div>
     </div>
-    
     <Paragraph>{ description1 }</Paragraph>
-    <section class="grid md:grid-cols-4 justify-center space-x-4 py-4">
+    <section class="grid md:grid-cols-4 justify-between pt-10 pb-20">
         <CountryCity
-            description={ description2 }
-            heading={ heading }
+            description={ heading1_desc1 }
+            heading={ heading1 }
             href=""
         />
         <CountryCity
-            description={ description2 }
-            heading={ heading }
+            description={ heading2_desc1 }
+            heading={ heading2 }
             href=""
         />
         <CountryCity
-            description={ description2 }
-            heading={ heading }
+            description={ heading3_desc1 }
+            heading={ heading3 }
             href=""
         />
         <CountryCity
-            description={ description2 }
-            heading={ heading }
+            description={ heading4_desc1 }
+            heading={ heading4 }
             href=""
         />
     </section>
