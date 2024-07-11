@@ -14,35 +14,30 @@ const {
     button_text,
     title,
     sub_title,
-    title2,
 
 } = Astro.props
 
 ---
-
 <section class="py-10 space-y-4 text-center items-center">
     <div class="relative flex py-2 items-center">
         <div class="flex-grow ml-4 border-black border-t-2"></div>
         <HeadingTwo>{ title }</HeadingTwo>
         <div class="flex-grow mr-4 border-black border-t-2"></div>
     </div>
-    <ParagraphRegularCenter>{ sub_title }</ParagraphRegularCenter>
-
-    
-    <div class="grid sm:grid-cols-2 md:grid-cols-3">
+    <ParagraphRegularCenter>{ sub_title }</ParagraphRegularCenter>    
+    <div class="grid grid-cols-2 md:grid-cols-3">
         <SportSummerInParisCard
             alternative_text="image"
-            source="/img.jpeg"
+            source="/images/sport-summer1.jpeg"
         />
         <SportSummerInParisCard
             alternative_text="image"
-            source="/img.jpeg"
+            source="/images/sport-summer2.jpeg"
         />
         <SportSummerInParisCard
             alternative_text="image"
-            source="/img.jpeg"
+            source="/images/sport-summer3.jpeg"
         />
     </div>
-
     <ButtonDropdownBlack>{ button_text }</ButtonDropdownBlack>
 </section>
