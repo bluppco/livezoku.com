@@ -14,17 +14,16 @@ const {
 } = Astro.props
 
 ---
-
-<div class="bg-gray-200">
-    <div class="md:flex p-4">
-        <div class="px-6 py-10 items-center justify-center inline-block">
+<section class="bg-gray-200 w-full">
+    <div class="flex flex-wrap md:gap-x-96 md:flex-none md:grid md:grid-cols-3 lg:gap-x-4 p-4 overflow-hidden">
+        <div class="md:col-span-1 px-12 py-10 h-96 w-96 mx-auto md:mx-0">
             <img
                 alt="Image"
-                class="w-40 md:w-full object-cover aspect-square rounded-full"
-                src="/img.jpeg"
+                class="h-full w-full rounded-full"
+                src="/images/customer.jpg"
             />
         </div>
-        <div class="pt-9 space-y-8">
+        <div class="md:pt-9 space-y-8 md:col-span-2">
             <div class="pb-6">
                 <HeadingFive>{ title }</HeadingFive>
             </div>
@@ -32,4 +31,4 @@ const {
             <ParagraphRegularCenter>{ description2 }<ParagraphRegularCenter>
         </div>
     </div>
-</div>
+</section>
