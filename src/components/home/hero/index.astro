@@ -7,15 +7,20 @@ import Header from "@/components/home/header/index.astro"
 import ParagraphRegularCenterWhite from "@/atoms/paragraph/regular/center/white/index.astro";
 import Anchor1 from "@/atoms/anchor1/index.astro";
 import ButtonBlack from "@/atoms/buttons/black/index.astro"
-
-
+import Regular from "@/atoms/hover/regular/index.astro"
 
 // GET ASTRO PROPS
 const {
 
-    heading1,
-    description2,
-    button_text,
+        button_text,
+        heading1,
+        heading2,
+        heading3,
+        heading4,
+        heading1_desc1,
+        heading2_desc1,
+        heading3_desc1,
+        heading4_desc1,
 
 } = Astro.props
 
@@ -31,7 +36,7 @@ const {
         />
     </video>
 
-    <Header
+    <!-- <Header
         title="ZOKU"
         sidetitle1="Menu"
         sidetitle2="Locations"
@@ -44,62 +49,72 @@ const {
         button_description2="COPENHAGEN"
         button_description3="PARIS"
         button_description4="VIENNA"
-    />
+    /> -->
     
     
     <!-- Locations -->
 
     <div class="sm:invisible md:visible absolute cursor-pointer top-36 flex justify-between space-x-24">
-        <div class="p-4 text-center items-center">
+        <div class="p-4 text-center items-center space-y-3">
             <Anchor1>{ heading1 }</Anchor1>
-            <br>
-            <ParagraphRegularCenterWhite>{ description2 }</ParagraphRegularCenterWhite>
+            <ParagraphRegularCenterWhite>{ heading1_desc1 }</ParagraphRegularCenterWhite>
         </div>
     
-        <div class="p-4 text-center items-center">
-            <Anchor1>{ heading1 }</Anchor1>
-            <br>
-            <ParagraphRegularCenterWhite>{ description2 }</ParagraphRegularCenterWhite>
+        <div class="p-4 text-center items-center space-y-3">
+            <Anchor1>{ heading2 }</Anchor1>
+            <ParagraphRegularCenterWhite>{ heading2_desc1 }</ParagraphRegularCenterWhite>
         </div>
     
-        <div class="p-4 text-center items-center">
-            <Anchor1>{ heading1 }</Anchor1>
-            <br>
-            <ParagraphRegularCenterWhite>{ description2 }</ParagraphRegularCenterWhite>
+        <div class="p-4 text-center items-center space-y-3">
+            <Anchor1>{ heading3 }</Anchor1>
+            <ParagraphRegularCenterWhite>{ heading3_desc1 }</ParagraphRegularCenterWhite>
         </div>
     
-        <div class="p-4 text-center items-center">
-            <Anchor1>{ heading1 }</Anchor1>
-            <br>
-            <ParagraphRegularCenterWhite>{ description2 }</ParagraphRegularCenterWhite>
+        <div class="p-4 text-center items-center space-y-3">
+            <Anchor1>{ heading4 }</Anchor1>
+            <ParagraphRegularCenterWhite>{ heading4_desc1 }</ParagraphRegularCenterWhite>
         </div>
     </div>
     
     <!-- Input -->
-    <div class="absolute sm:invisible md:visible top-56 flex justify-end pb-8">
+    <div class="absolute sm:invisible md:visible top-60 flex justify-end pb-8">
         <input 
-            class="text-center my-3 box-border border-2 bg-white" 
+            class="text-center my-3 box-border border-r-2 bg-white focus:outline-none"
+            onclick="dropdown()" 
             placeholder="Select location" 
             type="text">
+            <ul class="font-thin bg-white -mb-36 mt-12 -ml-40 px-5" id="submenu">
+                <Regular>{ heading1 }</Regular>
+                <Regular>{ heading2 }</Regular>
+                <Regular>{ heading3 }</Regular>
+                <Regular>{ heading4 }</Regular>
+            </ul>
         <div class="flex ">
             <input   
-                class="text-center w-36 my-3 bg-white" 
+                class="text-center w-36 my-3 bg-white focus:outline-none" 
                 placeholder="Arrival"
                 type="text">
             <i class="fa-solid fa-calendar-days text-center box-border border-l-0 border-r-2 my-3 py-3 pr-4 bg-white border-1 text-gray-300 text-xl "></i>
         </div>
         <div class="flex ">
             <input  
-                class="text-center w-36 box-border border-r-0 my-3 bg-white"
+                class="text-center w-36 my-3 bg-white focus:outline-none"
                 placeholder="Departure"
                 type="text" >
-            <i class="fa-solid fa-calendar-days  text-center box-border border-l-0 border-r-2 py-3 pr-4 my-3 bg-white border-1 text-gray-300 text-xl "></i>
+            <i class="fa-solid fa-calendar-days text-center box-border border-r-2 py-3 pr-4 my-3 bg-white border-1 text-gray-300 text-xl "></i>
         </div>
         <input   
-            class="text-center w-36 my-3 px-0 bg-white"
+            class="text-center w-36 my-3 px-0 bg-white focus:outline-none"
             placeholder="Got a code?"
             type="text">
         <ButtonBlack class="my-3">{ button_text }</ButtonBlack>
     </div>  
         
 </section>
+
+<script type="text/javascript">
+    function dropdown(){
+        document.querySelector('#submenu').classList.toggle('hidden');
+    }
+    dropdown()
+</script>
