@@ -1,0 +1,101 @@
+---
+
+// IMPORT ASTRO COMPONENTS
+import ImageTitleDescriptionButton from "@/components/home/stay-and-live/image-title-description-button/index.astro"
+
+// GET ASTRO PROPS
+const {
+
+    button_text1,
+    button_text2,
+    button_text3,
+    button_text4,
+    button_text5,
+    title1,
+    title2,
+    title3,
+    title4,
+    title5,
+    title1_des1,
+    title1_des2,
+    title2_des1,
+    title2_des2,
+    title3_des1,
+    title3_des2,
+    title4_des1,
+    title4_des2,
+    title5_des1,
+    title5_des2,
+
+} = Astro.props
+
+---
+<section class="mt-10 mb-16 xl:space-x-0">
+    <ImageTitleDescriptionButton
+        alternative_text="image"
+        button_text={ button_text1 }
+        description1={ title1_des1 }
+        description2={ title1_des2 }
+        is_right={ false }
+        source1="/images/stayandlive1.jpg"
+        source2="/images/stayandlive2..jpeg"
+        source3="/images/stayandlive3.jpg"
+        source4="/images/stayandlive4.jpg"
+        source5="/images/stayandlive5.jpg"
+        source6="/images/stayandlive6.jpg"
+        title={ title1 }
+    />
+    <ImageTitleDescriptionButton
+        alternative_text="image"
+        button_text={ button_text2 }
+        description1={ title2_des1 }
+        description2={ title2_des2 }
+        is_right={ true }
+        source1="/images/meetandcelebrate1.jpg"
+        source2="/images/meetandcelebrate2.jpg"
+        source3="/images/meetandcelebrate3.jpg"
+        source4="/images/meetandcelebrate4.jpeg"
+        source5="/images/meetandcelebrate5.jpg"
+        title={ title2 }
+    />
+    <ImageTitleDescriptionButton
+        alternative_text="image"
+        button_text={ button_text3 }
+        description1={ title3_des1 }
+        description2={ title3_des2 }
+        is_right={ false }
+        source1="/images/coworkandconnect1.jpg"
+        source2="/images/coworkandconnect2.jpg"
+        source3="/images/coworkandconnect3.jpg"
+        source4="/images/coworkandconnect4.jpg"
+        title={ title3 }
+    />
+    <ImageTitleDescriptionButton
+        alternative_text="image"
+        button_text={ button_text4 }
+        description1={ title4_des1 }
+        description2={ title4_des2 }
+        is_right={ true }
+        source1="/images/eatanddrink1.jpg"
+        source2="/images/eatanddrink2.jpg"
+        source3="/images/eatanddrink3.jpg"
+        source4="/images/eatanddrink4.jpg"
+        source5="/images/eatanddrink5.jpg"
+        source6="/images/eatanddrink6.jpg"
+        title={ title4 }
+    />
+    <ImageTitleDescriptionButton
+        alternative_text="image"
+        button_text={ button_text5 }
+        description1={ title5_des1 }
+        description2={ title5_des2 }
+        is_right={ false }
+        source1="/images/communityandevents1.jpg"
+        source2="/images/communityandevents2.jpg"
+        source3="/images/communityandevents3.jpg"
+        source4="/images/communityandevents4.jpg"
+        source5="/images/communityandevents5.jpg"
+        source6="/images/communityandevents6.jpg"
+        title={ title5 }
+    />
+</section>

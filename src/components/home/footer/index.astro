@@ -1,17 +1,17 @@
 ---
 
 // IMPORT ASTRO ATOMS
-import Center from "@/atoms/anchor/center/index.astro"
-import HeadingBottamBorder from "@/atoms/headings/four/bottam-border/index.astro"
+import ListItemCenter from "@/atoms/list-items/center/index.astro"
+import HeadingBottamBorder from "@/atoms/headings/four/border/index.astro"
 import HeadingSmall from "@/atoms/headings/three/small/index.astro"
-import HeadingWider from "@/atoms/headings/two/wider/index.astro"
+import HeadingWider from "@/atoms/headings/two/wider/four-xl/index.astro"
 import HeadingXL from "@/atoms/headings/three/XL/index.astro"
 import ParagraphBase from "@/atoms/paragraph/base/index.astro"
 import ParagraphXSmall from "@/atoms/paragraph/small/extrasmall/index.astro"
 import ParagraphGray from "@/atoms/paragraph/gray/index.astro"
 import ParagraphRegularXl from "@/atoms/paragraph/xl/index.astro"
 import ParagraphSmall from "@/atoms/paragraph/small/index.astro"
-import Regular from "@/atoms/anchor/regular/index.astro"
+import ListItemRegular from "@/atoms/list-items/regular/index.astro"
 
 // GET ASTRO PROPS
 const {
@@ -44,18 +44,18 @@ const {
     <div class="flex justify-between">
         <div class="justify-start md:flex-wrap lg:flex">
             <div class="pl-8 pb-14">
-                <ParagraphBase><Center>{ anchor_text2 }</Center></ParagraphBase>
-                <ParagraphBase><Center>{ anchor_text2 }</Center></ParagraphBase>
-                <ParagraphBase><Center>{ anchor_text2 }</Center></ParagraphBase>
-                <ParagraphBase><Center>{ anchor_text2 }</Center></ParagraphBase>
-                <ParagraphBase><Center>{ anchor_text2 }</Center></ParagraphBase>
+                <ParagraphBase><ListItemCenter>{ anchor_text2 }</ListItemCenter></ParagraphBase>
+                <ParagraphBase><ListItemCenter>{ anchor_text2 }</ListItemCenter></ParagraphBase>
+                <ParagraphBase><ListItemCenter>{ anchor_text2 }</ListItemCenter></ParagraphBase>
+                <ParagraphBase><ListItemCenter>{ anchor_text2 }</ListItemCenter></ParagraphBase>
+                <ParagraphBase><ListItemCenter>{ anchor_text2 }</ListItemCenter></ParagraphBase>
             </div>
             <div class="pb-14 pt-0 pl-8">
-                <ParagraphBase><Center>{ anchor_text2 }</Center></ParagraphBase>
-                <ParagraphBase><Center>{ anchor_text2 }</Center></ParagraphBase>
-                <ParagraphBase><Center>{ anchor_text2 }</Center></ParagraphBase>
-                <ParagraphBase><Center>{ anchor_text2 }</Center></ParagraphBase>
-                <ParagraphBase><Center>{ anchor_text2 }</Center></ParagraphBase>
+                <ParagraphBase><ListItemCenter>{ anchor_text2 }</ListItemCenter></ParagraphBase>
+                <ParagraphBase><ListItemCenter>{ anchor_text2 }</ListItemCenter></ParagraphBase>
+                <ParagraphBase><ListItemCenter>{ anchor_text2 }</ListItemCenter></ParagraphBase>
+                <ParagraphBase><ListItemCenter>{ anchor_text2 }</ListItemCenter></ParagraphBase>
+                <ParagraphBase><ListItemCenter>{ anchor_text2 }</ListItemCenter></ParagraphBase>
             </div>
         </div>
         <div class="flex-wrap">
@@ -73,11 +73,11 @@ const {
         <div class="flex-wrap pr-8">
             <div class="flex-wrap">
                 <i class="fa-solid fa-phone-volume"></i>
-                <Regular>{ contact_info1 }</Regular>
+                <ListItemRegular>{ contact_info1 }</ListItemRegular>
             </div>
             <div class="flex-wrap">
                 <i class="fa-regular fa-envelope"></i>
-                <Regular>{ contact_info2 }</Regular>
+                <ListItemRegular>{ contact_info2 }</ListItemRegular>
             </div>
         </div>      
     </div>
@@ -143,10 +143,10 @@ const {
             <HeadingWider>{ title }</HeadingWider>
         </div>
             <div class="text-center pt-5">
-                <Center>{ anchor_text1 }</Center> |
-                <Center>{ anchor_text1 }</Center> |
-                <Center>{ anchor_text1 }</Center> |
-                <Center>{ anchor_text1 }</Center>
+                <ListItemCenter>{ anchor_text1 }</ListItemCenter> |
+                <ListItemCenter>{ anchor_text1 }</ListItemCenter> |
+                <ListItemCenter>{ anchor_text1 }</ListItemCenter> |
+                <ListItemCenter>{ anchor_text1 }</ListItemCenter>
             </div>
             <br>
             <ParagraphSmall>{ description1 }</ParagraphSmall>

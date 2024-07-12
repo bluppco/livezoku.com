@@ -5,9 +5,9 @@ import Header from "@/components/home/header/index.astro"
 
 // IMPORT ASTRO ATOMS
 import ParagraphRegularCenterWhite from "@/atoms/paragraph/regular/center/white/index.astro";
-import Anchor1 from "@/atoms/anchor1/index.astro";
+import ListItemXL from "@/atoms/list-items/xl/index.astro";
 import ButtonBlack from "@/atoms/buttons/black/index.astro"
-import Regular from "@/atoms/hover/regular/index.astro"
+import ListItemRed from "@/atoms/list-items/red/index.astro"
 
 // GET ASTRO PROPS
 const {
@@ -50,32 +50,25 @@ const {
         button_description3="PARIS"
         button_description4="VIENNA"
     /> -->
-    
-    
     <!-- Locations -->
-
     <div class="sm:invisible md:visible absolute cursor-pointer top-36 flex justify-between space-x-24">
         <div class="p-4 text-center items-center space-y-3">
-            <Anchor1>{ heading1 }</Anchor1>
+            <ListItemXL>{ heading1 }</ListItemXL>
             <ParagraphRegularCenterWhite>{ heading1_desc1 }</ParagraphRegularCenterWhite>
         </div>
-    
         <div class="p-4 text-center items-center space-y-3">
-            <Anchor1>{ heading2 }</Anchor1>
+            <ListItemXL>{ heading2 }</ListItemXL>
             <ParagraphRegularCenterWhite>{ heading2_desc1 }</ParagraphRegularCenterWhite>
         </div>
-    
         <div class="p-4 text-center items-center space-y-3">
-            <Anchor1>{ heading3 }</Anchor1>
+            <ListItemXL>{ heading3 }</ListItemXL>
             <ParagraphRegularCenterWhite>{ heading3_desc1 }</ParagraphRegularCenterWhite>
         </div>
-    
         <div class="p-4 text-center items-center space-y-3">
-            <Anchor1>{ heading4 }</Anchor1>
+            <ListItemXL>{ heading4 }</ListItemXL>
             <ParagraphRegularCenterWhite>{ heading4_desc1 }</ParagraphRegularCenterWhite>
         </div>
     </div>
-    
     <!-- Input -->
     <div class="absolute sm:invisible md:visible top-60 flex justify-end pb-8">
         <input 
@@ -84,10 +77,10 @@ const {
             placeholder="Select location" 
             type="text">
             <ul class="font-thin bg-white -mb-36 mt-12 -ml-40 px-5" id="submenu">
-                <Regular>{ heading1 }</Regular>
-                <Regular>{ heading2 }</Regular>
-                <Regular>{ heading3 }</Regular>
-                <Regular>{ heading4 }</Regular>
+                <ListItemRed>{ heading1 }</ListItemRed>
+                <ListItemRed>{ heading2 }</ListItemRed>
+                <ListItemRed>{ heading3 }</ListItemRed>
+                <ListItemRed>{ heading4 }</ListItemRed>
             </ul>
         <div class="flex ">
             <input   
@@ -109,7 +102,6 @@ const {
             type="text">
         <ButtonBlack class="my-3">{ button_text }</ButtonBlack>
     </div>  
-        
 </section>
 
 <script type="text/javascript">

@@ -1,6 +1,6 @@
 ---
-order: 2
+order: 3
 live: true
 title: Group Bookings
-link: /group-bookings
+link: /group-bookings/
 ---

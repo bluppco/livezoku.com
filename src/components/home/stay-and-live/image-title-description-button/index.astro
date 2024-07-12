@@ -1,0 +1,100 @@
+---
+
+// IMPORTS ASTRO ATOMS
+import ButtonDropdown from "@/atoms/buttons/dropdown/index.astro"
+import HeadingFour from "@/atoms/headings/four/index.astro"
+import ParagraphRegular from "@/atoms/paragraph/regular/index.astro"
+
+// IMPORTS CUSTOM CSS
+import CUSTOMCSS from "@/style/custom.css"
+
+// GET ASTRO PROPS
+const {
+
+    alternative_text,
+    button_text,
+    description1,
+    description2,
+    is_right,
+    source1,
+    source2,
+    source3,
+    source4,
+    source5,
+    source6,
+    title,
+
+} = Astro.props
+
+---
+<div class="grid md:grid-cols-2">
+    <div class={` ${ is_right ? "md:order-last" : "" } max-h-screen max-w-xl pt-4`}>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img
+                    alt={ alternative_text }
+                    class="md:w-full md:h-96 sm:w-full sm:h-72 lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl"
+                    src={ source1 }
+                    />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                    alt={ alternative_text }
+                    class="md:w-full md:h-96 sm:w-full sm:h-72 lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl"
+                    src={ source2 }
+                    />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                    alt={ alternative_text }
+                    class="md:w-full md:h-96 sm:w-full sm:h-72 lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl"
+                    src={ source3 }
+                    />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                    alt={ alternative_text }
+                    class="md:w-full md:h-96 sm:w-full sm:h-72 lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl"
+                    src={ source4 }
+                    />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                    alt={ alternative_text }
+                    class="md:w-full md:h-96 sm:w-full sm:h-72 lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl"
+                    src={ source5 }
+                    />
+                </div>
+                <div class="swiper-slide">
+                    <img
+                    alt={ alternative_text }
+                    class="md:w-full md:h-96 sm:w-full sm:h-72 lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl"
+                    src={ source6 }
+                    />
+                </div>                
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+        
+    </div>
+    <div class="items-center m-auto px-10 space-y-5 pb-20">
+        <div class="pb-4">
+            <HeadingFour>{ title }</HeadingFour>
+        </div> 
+        <ParagraphRegular>{ description1 }</ParagraphRegular>
+        <ParagraphRegular>{ description2 }</ParagraphRegular>
+        <ButtonDropdown>{ button_text }<i class="fa-solid fa-caret-down p-2"></i></ButtonDropdown>
+    </div>
+</div>
+
+<script>
+    let swiper = new Swiper(".mySwiper", {
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+    });
+</script>
