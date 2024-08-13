@@ -1,0 +1,39 @@
+---
+
+// IMPORT ASTRO COMPONENTS
+import PickYourPurposeCard from "@/components/home/pick-your-purpose/card/index.astro"
+
+// IMPORT ASTRO ATOMS
+import HeadingTwo from "@/atoms/headings/two/index.astro"
+
+// GET ASTRO PROPS
+const {
+
+    title,
+    title1,
+    title2,
+
+} = Astro.props
+
+---
+
+<section class="space-y-10 py-10">
+    <div class="relative flex py-5 items-center">
+        <div class="flex-grow ml-4 border-black border-t-2"></div>
+        <HeadingTwo>{ title }</HeadingTwo>
+        <div class="flex-grow mr-4 border-black border-t-2"></div>
+    </div>
+    
+    <div class="grid grid-cols-2 uppercase">
+        <PickYourPurposeCard
+            alternative_text="image"
+            source="/img.jpeg"
+            title={ title1 }
+        />
+        <PickYourPurposeCard
+            alternative_text="image"
+            source="/img.jpeg"
+            title={ title2 }
+        />
+    </div>
+</section>

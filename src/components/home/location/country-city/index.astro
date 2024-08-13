@@ -1,0 +1,20 @@
+---
+
+// IMPORTS ASTRO ATOMS
+import ParagraphRegular from "@/atoms/paragraph/regular/index.astro"
+import ListItem2XL from "@/atoms/list-items/two-xl/index.astro"
+
+// GET ASTRO PROPS
+const {
+
+    description,
+    heading,
+    href,
+
+} = Astro.props
+
+---
+<div class="justify-between text-center space-y-2">
+    <ListItem2XL>{ heading }</ListItem2XL>
+    <ParagraphRegular>{ description }</ParagraphRegular>
+</div>

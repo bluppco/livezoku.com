@@ -1,0 +1,43 @@
+---
+
+// IMPORT ASTRO COMPONENTS
+import SportSummerInParisCard from "@/components/home/sports-summer-in-paris/card/index.astro"
+
+// IMPORT ASTRO ATOMS
+import HeadingTwo from "@/atoms/headings/two/index.astro"
+import ParagraphRegularCenter from "@/atoms/paragraph/regular/center/index.astro"
+import ButtonDropdownBlack from "@/atoms/buttons/dropdown/dropdownblack/index.astro";
+
+// GET ASTRO PROPS
+const {
+
+    button_text,
+    title,
+    sub_title,
+
+} = Astro.props
+
+---
+<section class="py-10 space-y-4 text-center items-center">
+    <div class="relative flex py-2 items-center">
+        <div class="flex-grow ml-4 border-black border-t-2"></div>
+        <HeadingTwo>{ title }</HeadingTwo>
+        <div class="flex-grow mr-4 border-black border-t-2"></div>
+    </div>
+    <ParagraphRegularCenter>{ sub_title }</ParagraphRegularCenter>    
+    <div class="grid grid-cols-2 md:grid-cols-3">
+        <SportSummerInParisCard
+            alternative_text="image"
+            source="/images/sport-summer1.jpeg"
+        />
+        <SportSummerInParisCard
+            alternative_text="image"
+            source="/images/sport-summer2.jpeg"
+        />
+        <SportSummerInParisCard
+            alternative_text="image"
+            source="/images/sport-summer3.jpeg"
+        />
+    </div>
+    <ButtonDropdownBlack>{ button_text }</ButtonDropdownBlack>
+</section>

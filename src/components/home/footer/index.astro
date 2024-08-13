@@ -1,0 +1,172 @@
+---
+
+// IMPORT ASTRO ATOMS
+import ListItemCenter from "@/atoms/list-items/center/index.astro"
+import HeadingBottamBorder from "@/atoms/headings/four/border/index.astro"
+import HeadingSmall from "@/atoms/headings/three/small/index.astro"
+import HeadingWider from "@/atoms/headings/two/wider/four-xl/index.astro"
+import HeadingXL from "@/atoms/headings/three/XL/index.astro"
+import ParagraphBase from "@/atoms/paragraph/base/index.astro"
+import ParagraphXSmall from "@/atoms/paragraph/small/extrasmall/index.astro"
+import ParagraphGray from "@/atoms/paragraph/gray/index.astro"
+import ParagraphRegularXl from "@/atoms/paragraph/xl/index.astro"
+import ParagraphSmall from "@/atoms/paragraph/small/index.astro"
+import ListItemRegular from "@/atoms/list-items/regular/index.astro"
+
+// GET ASTRO PROPS
+const {
+
+    anchor_text1,
+    anchor_text2,
+    contact_info1,
+    contact_info2,
+    description1,
+    description2,
+    description3,
+    description4,
+    submenu1,
+    submenu2,
+    submenu2_description1,
+    submenu2_description2,
+    submenu2_description3,
+    submenu2_description4,
+    submenu2_description5,
+    submenu2_description6,
+    submenu2_description7,
+    submenu2_description8,
+    title,
+
+} = Astro.props
+
+---
+
+<section class="space-x-10 bg-gray-100 md:justify-between md:items-center pt-20 mx-auto sm:hidden md:block">
+    <div class="flex justify-between">
+        <div class="justify-start md:flex-wrap lg:flex">
+            <div class="pl-8 pb-14">
+                <ParagraphBase><ListItemCenter>{ anchor_text2 }</ListItemCenter></ParagraphBase>
+                <ParagraphBase><ListItemCenter>{ anchor_text2 }</ListItemCenter></ParagraphBase>
+                <ParagraphBase><ListItemCenter>{ anchor_text2 }</ListItemCenter></ParagraphBase>
+                <ParagraphBase><ListItemCenter>{ anchor_text2 }</ListItemCenter></ParagraphBase>
+                <ParagraphBase><ListItemCenter>{ anchor_text2 }</ListItemCenter></ParagraphBase>
+            </div>
+            <div class="pb-14 pt-0 pl-8">
+                <ParagraphBase><ListItemCenter>{ anchor_text2 }</ListItemCenter></ParagraphBase>
+                <ParagraphBase><ListItemCenter>{ anchor_text2 }</ListItemCenter></ParagraphBase>
+                <ParagraphBase><ListItemCenter>{ anchor_text2 }</ListItemCenter></ParagraphBase>
+                <ParagraphBase><ListItemCenter>{ anchor_text2 }</ListItemCenter></ParagraphBase>
+                <ParagraphBase><ListItemCenter>{ anchor_text2 }</ListItemCenter></ParagraphBase>
+            </div>
+        </div>
+        <div class="flex-wrap">
+            <HeadingWider>{ title }</HeadingWider>
+            <br><br>
+            <div class="text-center">
+                <Center>{ anchor_text1 }</Center> |
+                <Center>{ anchor_text1 }</Center> |
+                <Center>{ anchor_text1 }</Center> |
+                <Center>{ anchor_text1 }</Center>
+            </div>
+            <br>
+            <ParagraphSmall>{ description1 }</ParagraphSmall>
+        </div>     
+        <div class="flex-wrap pr-8">
+            <div class="flex-wrap">
+                <i class="fa-solid fa-phone-volume"></i>
+                <ListItemRegular>{ contact_info1 }</ListItemRegular>
+            </div>
+            <div class="flex-wrap">
+                <i class="fa-regular fa-envelope"></i>
+                <ListItemRegular>{ contact_info2 }</ListItemRegular>
+            </div>
+        </div>      
+    </div>
+    <div class="flex justify-between pb-0">
+        <div class="">
+            <HeadingSmall>{ description2 }</HeadingSmall>
+            <ParagraphXSmall>{ description3 }</ParagraphXSmall>
+        </div>
+        <div>
+            <ParagraphRegularXl>{ description4 }</ParagraphRegularXl>
+        </div>
+        <div class="text-right space-x-2 text-lg">
+            <i class="fa-brands fa-facebook-f hover:text-red-400"></i>
+            <i class="fa-brands fa-x-twitter hover:text-red-400"></i>
+            <i class="fa-brands fa-square-instagram hover:text-red-400"></i>
+            <i class="fa-brands fa-linkedin-in hover:text-red-400"></i>
+            <i class="fa-brands fa-tiktok hover:text-red-400"></i>
+            <i class="fa-brands fa-youtube hover:text-red-400"></i>
+        </div>
+    </div>
+</section>
+<!-- Resposive Footer -->
+<section class="bg-gray-100 pt-16 md:hidden">
+    <div class="flex-wrap justify-center text-center">
+        <HeadingXL>{ title }</HeadingXL>
+        <!-- Contact us -->
+        <div class="flex space-x-8 pt-10 text-xl justify-center font-sans font-thin text-gray-700 cursor-pointer" onclick="dropdown()">
+            <HeadingBottamBorder>{ submenu1 }
+                <span class="rotate-180" id="arrow">
+                    <i class="fa-solid fa-caret-down pl-36 text-gray-600"></i>
+                </span>
+            </HeadingBottamBorder> 
+        </div>
+        <div class="bg-white mx-32 py-6 space-y-4" id="submenu">
+            <div class="flex-wrap">
+                <i class="fa-solid fa-phone-volume"></i>
+                <Regular>{ contact_info1 }</Regular>
+            </div>
+            <div class="flex-wrap">
+                <i class="fa-regular fa-envelope"></i>
+                <Regular>{ contact_info2 }</Regular>
+            </div>
+        </div>
+        <!-- Get to know us -->
+        <div class="flex space-x-8 pt-10 justify-center text-xl font-sans font-thin text-gray-700" onclick="dropdown2()">
+            <HeadingBottamBorder>{ submenu2 }
+                <span class="rotate-0" id="arrow2">
+                    <i class="fa-solid fa-caret-down pl-28 text-gray-600"></i>
+                </span>
+            </HeadingBottamBorder>
+        </div>
+        <div class="bg-white mx-32 py-6 space-y-4" id="submenu2">
+            <ParagraphGray><a href="">{ submenu2_description1 }</a></ParagraphGray>
+            <ParagraphGray><a href="">{ submenu2_description2 }</a></ParagraphGray>
+            <ParagraphGray><a href="">{ submenu2_description3 }</a></ParagraphGray>
+            <ParagraphGray><a href="">{ submenu2_description4 }</a></ParagraphGray>
+            <ParagraphGray><a href="">{ submenu2_description5 }</a></ParagraphGray>
+            <ParagraphGray><a href="">{ submenu2_description6 }</a></ParagraphGray>
+            <ParagraphGray><a href="">{ submenu2_description7 }</a></ParagraphGray>
+            <ParagraphGray><a href="">{ submenu2_description8 }</a></ParagraphGray>
+        </div>
+        <div class="pt-10">
+            <HeadingWider>{ title }</HeadingWider>
+        </div>
+            <div class="text-center pt-5">
+                <ListItemCenter>{ anchor_text1 }</ListItemCenter> |
+                <ListItemCenter>{ anchor_text1 }</ListItemCenter> |
+                <ListItemCenter>{ anchor_text1 }</ListItemCenter> |
+                <ListItemCenter>{ anchor_text1 }</ListItemCenter>
+            </div>
+            <br>
+            <ParagraphSmall>{ description1 }</ParagraphSmall>
+            <ParagraphRegularXl>{ description4 }</ParagraphRegularXl>
+            <div class="pb-20 pt-6">
+                <HeadingSmall>{ description2 }</HeadingSmall>
+                <p class="font-thin text-xs font-sans">{ description3 }</p>
+            </div>
+    </div>
+</section>
+
+<script type="text/javascript">
+    function dropdown(){
+        document.querySelector('#submenu').classList.toggle('hidden');
+        document.querySelector('#arrow').classList.toggle('rotate-0');
+    }
+    dropdown()
+    function dropdown2(){
+        document.querySelector('#submenu2').classList.toggle('hidden');
+        document.querySelector('#arrow2').classList.toggle('rotate-0');
+    }
+    dropdown2()
+</script>

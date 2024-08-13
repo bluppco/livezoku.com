@@ -1,0 +1,24 @@
+---
+
+// IMPORT ASTRO ATOMS
+import ParagraphRegularCenter from "@/atoms/paragraph/regular/center/index.astro"
+import HeadingOne from "@/atoms/headings/one/index.astro"
+
+// GET ASTRO PROPS
+const {
+
+    description,
+    sub_title,
+    title,
+
+} = Astro.props
+
+---
+
+<section class="space-y-8 py-12">
+    <div class="pb-4">
+        <HeadingOne>{ title }</HeadingOne>
+    </div>
+    <ParagraphRegularCenter>{ sub_title }</ParagraphRegularCenter>
+    <ParagraphRegularCenter>{ description }</ParagraphRegularCenter>
+</section>

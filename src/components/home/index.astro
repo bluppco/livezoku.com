@@ -1,0 +1,145 @@
+---
+
+// IMPORT ASTRO COLLECTION
+import { getCollection } from 'astro:content'
+
+// IMPORT ASTRO LAYOUTS
+import Container from "@/layouts/container/index.astro"
+
+// IMPORT FOOTER COLUMN ONE COLLECTION
+let footer_column_one = await getCollection('footer-column-two')
+footer_column_one = footer_column_one.sort((a, b) => a.data.order - b.data.order).filter( ( item ) => item.data.live )
+
+// IMPORT ASTRO COMPONENTS
+import CustomerReview from "@/components/home/customer-review/index.astro"
+import Featured from "@/components/home/featured/index.astro"
+import FollowUs from "@/components/home/follow-us/index.astro"
+import Footer from "@/components/home/footer/index.astro"
+import Footerr from "@/components/common/footer/index.astro"
+import Hero from "@/components/home/hero/index.astro"
+import Location from "@/components/home/location/index.astro"
+import StayandLive from "@/components/home/stay-and-live/index.astro"
+import PickYourPurpose from "@/components/home/pick-your-purpose/index.astro"
+import SportSummerInParis from "@/components/home/sports-summer-in-paris/index.astro"
+import Subscribe from "@/components/home/subscribe/index.astro"
+import ProudBcrop from "@/components/home/proud-b-crop/index.astro"
+import Welcome from "@/components/home/welcome/index.astro"
+
+---
+
+
+<Hero
+    heading1="Amsterdam"
+    heading2="Copenhagen"
+    heading3="Paris"
+    heading4="Vienna"
+    heading1_desc1="Netherlands"
+    heading2_desc1="Denmark"
+    heading3_desc1="France"
+    heading4_desc1="Austria"
+	button_text="Book Now"
+/>
+<Container>
+    <Welcome
+        description="We're Zoku. Designed for the new generation of business travelers, we’re so much more than a long stay hotel. We’re a place you can call your second home, even on your first visit. We’ve created a hive of private Lofts and rooftop Social Spaces, so you can stay connected and well rested as you live and work throughout Europe. Throw yourself into your work and play, and effortlessly discover one of our home cities. It will be your home city next."
+        sub_title="Discover a new kind of business hotel in Europe's most livable cities"
+        title="WELCOME TO ZOKU"
+    />
+    <Featured
+        description1="A New Type of Hotel is Upping its Game to Compete with Airbnb"
+        description2="One of the 25 Coolest Hotels in the World"
+        description3="Expertly Designed with Business Travellers in Mind"
+        description4="10 Stunning Apartment Hotels Around the Europe's Best Hotels for Business Travel"
+        description5="These New Hotels Can Actually Compare to Airbnb"
+        description6="Europe’s Best Hotels for Business Travel"
+        description7="New Hotel Concept Provides Global Nomads with a Local Social Life"
+        title="AS FEATURED IN"
+    />
+</Container>
+<ProudBcrop
+    description="In 2018, Zoku Amsterdam received the B Corp certification, making us the first B Corp certified hospitality company in the Netherlands. Certified B Corporations are businesses that meet the highest standards of verified social and environmental performance, public transparency, and legal accountability to balance profit and purpose. "
+    title="WE'RE A PROUD B CORP"
+/>
+<StayandLive
+    button_text1="LOFTS & ROOMS AT ZOKU"
+    button_text2="MEETING AND EVENTS AT ZOKU"
+    button_text3="COWORKING AT ZOKU"
+    button_text4="EAT & DRINK AT ZOKU"
+    button_text5="EVENT PROGRAM AT ZOKU"
+    title1="STAY & LIVE"
+    title2="MEET & CELEBRATE"
+    title3="COWORK & CONNECT"
+    title4="EAT & DRINK"
+    title5="COMMUNITY & EVENTS"
+    title1_des1="Introducing the perfect homebase for living and working"
+    title1_des2="The Zoku Loft is a flexible home-office hybrid that sets a new standard in the intelligent use of space. It’s an entire apartment’s worth of spaces all combined into a single lofty home – making it an ideal base of operations for living, working, and collaborating."
+    title2_des1="Fuel connections, spark ideas, and drive productivity."
+    title2_des2="Our rooftop meeting rooms and large event space are designed to fuel connections, spark ideas, and drive productivity. The areas are flooded with natural light and have amazing views overlooking the city."
+    title3_des1="Fuel connections, spark ideas, and drive productivity in our coworking spaces."
+    title3_des2="It’s up to you how you want to cowork on our rooftop. Whether you’re looking to spend a day working alongside a diverse group of professionals or interested in becoming a monthly WorkZoku member with unlimited coworking and a plethora of perks, we have flexible options to suit your needs. Ready to experience coworking with a view? Click below to explore our offerings and join our vibrant community!"
+    title4_des1="Simple and honest food in a residential atmosphere"
+    title4_des2="Whether you’re looking for a jolt of morning coffee or a delicious meal after an honest day’s work, our Living Kitchen restaurant and Kindred Spirits bar have everything you need (or crave) to fill your stomachs and taste buds."
+    title5_des1="Because amazing things happen when people come together"
+    title5_des2="Regular events with local partners will bring you in direct contact with inspiring individuals and companies. Exchange concepts, products, and life lessons while mingling with others on our rooftop. Our ultimate goal is to enrich your network, social circles, and horizons."
+/>
+<CustomerReview
+    description1="“At first glance, Zoku appears to be just another hotel with spacious rooms, a creative marketing team, and some great puns on its coffee mugs. But taking a closer look – there is so much more to unpack. I have been living and working here for a little over a month now, and I have been wowed by the sense of belonging and community this place conveys. So much so, that I have extended my stay by another month. It’s truly the best place to land in when moving to a city like Amsterdam, much of which is owed to the people that work here alongside everyone who decides to come back here to work remotely, day after day. It nails down a perfect balance between being an atmosphere that fosters creativity and productivity.”"
+    description2="-Chris, Relocation at Zoku Amsterdam"
+    title="Don't just take our word for it..."
+/>
+<Container>
+    <SportSummerInParis
+    button_text="FIND OUT MORE"
+    title="SPORT SUMMER IN PARIS"
+    sub_title="Join our rooftop live streams, host a private watch party, or book a pop-up content studio. There's literally something fun for everyone!"
+    />
+    <PickYourPurpose
+        title="PICK YOUR PURPOSE"
+        title1="TEAM RETREATS AT ZOKU"
+        title2="RELOCATIONS AT ZOKU"
+    />
+    <Location
+        description1="Find us in Europe's most livable cities"
+        heading1="Amsterdam"
+        heading2="Copenhagen"
+        heading3="Paris"
+        heading4="Vienna"
+        heading1_desc1="Netherlands"
+        heading2_desc1="Denmark"
+        heading3_desc1="France"
+        heading4_desc1="Austria"
+        title="LOCATIONS"
+    />
+    <FollowUs
+        title="FOLLOW US"
+    />
+</Container>
+<Subscribe
+    button_text="Subscribe"
+    description="Sign up to get up to 15% off your next stay – with exclusive overnight stay, meeting, and event offers right to your inbox!"
+    title="Ready To Live Zoku? Subscribe For 15% Off!"
+/>
+<!-- <Footer
+    anchor_text1="Amsterdam"
+    anchor_text2="Sustainability"
+    contact_info1="+31(0)208112811"
+    contact_info2="hello@livezoku.com"
+    description1="and more to come..."
+    description2="© 2024 ZOKU"
+    description3="Website by The blupp"
+    description4="HAPPY END"
+    submenu1="Contact us"
+    submenu2="Get to know us"
+    submenu2_description1="Group Bookings"
+    submenu2_description2="Sustainability"
+    submenu2_description3="Devlopment"
+    submenu2_description4="Future of work"
+    submenu2_description5="Jobs"
+    submenu2_description6="Paragraph"
+    submenu2_description7="Blog"
+    submenu2_description8="Legal"
+    title="ZOKU"
+/>
+<Footerr
+    footer_column_one={ footer_column_one }
+/> -->

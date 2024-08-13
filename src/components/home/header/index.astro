@@ -1,0 +1,104 @@
+---
+
+// IMPORT ASTRO ATOMS
+import ButtonRed from "@/atoms/buttons/red/index.astro"
+import ParagraphXlWhite from "@/atoms/paragraph/xl/whitetextbase/index.astro";
+import ListItemRed from "@/atoms/list-items/red/index.astro"
+import ListItemWhite from "@/atoms/list-items/white/index.astro"
+import ListItemWiderText from "@/atoms/list-items/widertext/index.astro"
+
+// GET ASTRO PROPS
+const {
+
+    title,
+    sidetitle1,
+    sidetitle2,
+    button_text,
+    sidetitle2_description1,
+    sidetitle2_description2,
+    sidetitle2_description3,
+    sidetitle2_description4,
+    button_description1,
+    button_description2,
+    button_description3,
+    button_description4,
+
+} = Astro.props
+
+---
+
+<header class="top-8 absolute w-full p-4 sm:hidden md:block">
+    <ul class="flex justify-between">
+        <div class="space-x-2 flex">
+        <!-- Menu -->
+        <li class="group cursor-pointer">
+            <div class="">
+                <i class="fa-solid fa-bars text-3xl text-white"></i>
+                <ParagraphXlWhite>{ sidetitle1 }<i class="fa-solid fa-caret-down p-2"></i></ParagraphXlWhite>
+            </div>
+        </li>
+        <!-- Location -->
+        <li class="group cursor-pointer">
+            <div class="">
+                <i class="fa-solid fa-location-dot text-3xl text-white"></i>
+                <ParagraphXlWhite>{ sidetitle2 }<i class="fa-solid fa-caret-down p-2"></i></ParagraphXlWhite>
+                <ul class="invisible group-hover:visible box-border border-2 font-thin bg-transparent px-4">
+                    <ListItemWhite>{ sidetitle2_description1 }</ListItemWhite>
+                    <ListItemWhite>{ sidetitle2_description2 }</ListItemWhite>
+                    <ListItemWhite>{ sidetitle2_description3 }</ListItemWhite>
+                    <ListItemWhite>{ sidetitle2_description4 }</ListItemWhite>
+                </ul>
+            </div>
+        </li>
+        </div>
+        <!-- Button -->
+        <ListItemWiderText>{ title }</ListItemWiderText>
+        <div class="group cursor-pointer"><ButtonRed>{ button_text }<i class="fa-solid fa-caret-down p-4"></i></ButtonRed>
+            <ul class="invisible group-hover:visible font-thin bg-white group-hover:box-border border-2 mr-8">
+                <ListItemRed>{ button_description1 }</ListItemRed>
+                <ListItemRed>{ button_description2 }</ListItemRed>
+                <ListItemRed>{ button_description3 }</ListItemRed>
+                <ListItemRed>{ button_description4 }</ListItemRed>
+            </ul>
+        </div>
+    </ul> 
+</header>
+<!-- Responsive Header -->
+<div class="top-8 absolute w-full p-4 text-center sm:visible md:hidden">
+    <ul class="flex justify-between">
+        <div class="flex gap-2">
+        <!-- Location -->
+        <li class="group cursor-pointer">
+            <div class="">
+                <i class="fa-solid fa-location-dot text-3xl text-white"></i>
+                <ParagraphXlWhite>{ sidetitle2 }<i class="fa-solid fa-caret-down p-2"></i></ParagraphXlWhite>
+                <ul class="invisible group-hover:visible box-border border-2 font-thin bg-transparent px-4">
+                    <ListItemWhite>{ sidetitle2_description1 }</ListItemWhite>
+                    <ListItemWhite>{ sidetitle2_description2 }</ListItemWhite>
+                    <ListItemWhite>{ sidetitle2_description3 }</ListItemWhite>
+                    <ListItemWhite>{ sidetitle2_description4 }</ListItemWhite>
+                </ul>
+            </div>
+        </li>
+        </div>
+        <!-- Title -->
+        <ListItemWiderText>{ title }</ListItemWiderText>
+        <!-- Menu -->
+        <li class="group cursor-pointer">
+            <div class="">
+                <i class="fa-solid fa-bars text-3xl text-white"></i>
+            </div>
+        </li>
+    </ul> 
+</div>
+
+<!-- <script>
+    document.addEventListener("scroll" , ()=>{
+        const header = document.querySelector("header");
+        if(window.scrollY > 90){
+            header.classList.add("scrolled");
+        }else{
+            header.classList.remove("scrolled");
+        }
+    });
+</script>  -->

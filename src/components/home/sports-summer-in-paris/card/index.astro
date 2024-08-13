@@ -1,0 +1,23 @@
+---
+
+// IMPORT ASTRO ATOMS
+import HeadingThree from "@/atoms/headings/three/index.astro"
+
+// GET ASTRO PROPS
+const {
+
+    alternative_text,
+    source,
+
+} = Astro.props
+
+---
+<div class="relative max-w-xl mx-auto">
+    <div class="rounded-md md:px-4 lg:px-6 h-80 w-80 lg:h-96 lg:w-96 overflow-hidden">
+        <img
+            alt={ alternative_text }
+            class="p-2"
+            src={ source }
+        />
+    </div>
+</div>

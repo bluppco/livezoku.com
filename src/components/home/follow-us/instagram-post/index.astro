@@ -1,0 +1,22 @@
+---
+
+// GET ASTRO PROPS
+const {
+
+    alternative_text,
+    href,
+    source,
+
+} = Astro.props
+
+---
+<a href={ href }>
+    <div class="relative p-2 h-80 mx-auto mt-15">
+        <img
+            alt={ alternative_text }
+            class="w-full h-full"
+            src={ source }
+        />
+        <div class="absolute inset-0 mx-3 my-4 opacity-50 overflow-hidden transition delay-300 ease-in-out hover:scale-105 duration-500 hover:bg-gray-700"/>
+    </div>
+</a>

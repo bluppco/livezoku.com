@@ -1,0 +1,14 @@
+---
+
+// IMPORT ASTRO COMPONENTS
+import FooterColumnOne from "@/components/common/footer/column-one/index.astro"
+
+// GET ASTRO PROPS
+const { footer_column_one } = Astro.props
+
+---
+<footer class="bg-gray-100">
+    <FooterColumnOne
+        data={ footer_column_one }
+    />
+</footer>
