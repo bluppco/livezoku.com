@@ -1,12 +1,33 @@
 ---
 
+// IMPORT ASTRO LAYOUTS
+import Container from "@/layouts/container/index.astro"
+
 // IMPORT ASTRO COMPONENTS
 import SportSummerInParisCard from "@/components/home/sports-summer-in-paris/card/index.astro"
 
 // IMPORT ASTRO ATOMS
-import HeadingTwo from "@/atoms/headings/two/index.astro"
-import ParagraphRegularCenter from "@/atoms/paragraph/regular/center/index.astro"
-import ButtonDropdownBlack from "@/atoms/buttons/dropdown/dropdownblack/index.astro";
+import HeadingTwo4xlThinCenter from "@/atoms/headings/two/4xl/thin/center/index.astro"
+import ParagraphBaseCenter from "@/atoms/paragraph/base/center/index.astro"
+import ButtonTransparentHoverBlack from "@/atoms/buttons/transparent-hover-black/index.astro";
+
+// CARD ARRAY
+const cards = [
+
+    {
+        alternative_text:"image",
+        source:"/images/sport-summer1.jpeg",
+    },
+    {
+        alternative_text:"image",
+        source:"/images/sport-summer2.jpeg",
+    },
+    {
+        alternative_text:"image",
+        source:"/images/sport-summer3.jpeg",
+    },
+
+]
 
 // GET ASTRO PROPS
 const {
@@ -18,26 +39,38 @@ const {
 } = Astro.props
 
 ---
-<section class="py-10 space-y-4 text-center items-center">
-    <div class="relative flex py-2 items-center">
-        <div class="flex-grow ml-4 border-black border-t-2"></div>
-        <HeadingTwo>{ title }</HeadingTwo>
-        <div class="flex-grow mr-4 border-black border-t-2"></div>
-    </div>
-    <ParagraphRegularCenter>{ sub_title }</ParagraphRegularCenter>    
-    <div class="grid grid-cols-2 md:grid-cols-3">
-        <SportSummerInParisCard
-            alternative_text="image"
-            source="/images/sport-summer1.jpeg"
-        />
-        <SportSummerInParisCard
-            alternative_text="image"
-            source="/images/sport-summer2.jpeg"
-        />
-        <SportSummerInParisCard
-            alternative_text="image"
-            source="/images/sport-summer3.jpeg"
-        />
-    </div>
-    <ButtonDropdownBlack>{ button_text }</ButtonDropdownBlack>
+<section class="py-10">
+    <Container>
+        <div class="relative flex items-center mb-6">
+            <div class="flex-grow ml-4 border-black border-t-2"></div>
+            <HeadingTwo4xlThinCenter>{ title }</HeadingTwo4xlThinCenter>
+            <div class="flex-grow mr-4 border-black border-t-2"></div>
+        </div>
+        <div class="space-y-10">
+            <div class="flex mx-auto justify-center">
+                <ParagraphBaseCenter>{ sub_title }</ParagraphBaseCenter>    
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-2 md:gap-6 lg:gap-8">
+                {
+        
+                    cards.map( ( item ) =>{
+        
+                        return ( 
+        
+                                <SportSummerInParisCard
+                                    alternative_text={ item.alternative_text }
+                                    source={ item.source }
+                                />
+        
+                        )
+        
+                    })
+        
+                }
+            </div>
+            <div class="flex justify-center">
+                <ButtonTransparentHoverBlack>{ button_text }</ButtonTransparentHoverBlack>
+            </div>
+        </div>
+    </Container>
 </section>
