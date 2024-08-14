@@ -43,7 +43,9 @@ const {
     <Container>
         <div class="relative flex items-center mb-6">
             <div class="flex-grow ml-4 border-black border-t-2"></div>
-            <HeadingTwo4xlThinCenter>{ title }</HeadingTwo4xlThinCenter>
+            <div class="mx-2 sm:mx-4 md:mx-6">
+                <HeadingTwo4xlThinCenter>{ title }</HeadingTwo4xlThinCenter>
+            </div>
             <div class="flex-grow mr-4 border-black border-t-2"></div>
         </div>
         <div class="space-y-10">
@@ -69,7 +71,9 @@ const {
                 }
             </div>
             <div class="flex justify-center">
-                <ButtonTransparentHoverBlack>{ button_text }</ButtonTransparentHoverBlack>
+                <a href="/paris/sports-summer/">
+                    <ButtonTransparentHoverBlack>{ button_text }</ButtonTransparentHoverBlack>
+                </a>
             </div>
         </div>
     </Container>
