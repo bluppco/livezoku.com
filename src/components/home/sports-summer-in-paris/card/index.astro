@@ -12,12 +12,10 @@ const {
 } = Astro.props
 
 ---
-<div class="relative max-w-xl mx-auto">
-    <div class="rounded-md md:px-4 lg:px-6 h-80 w-80 lg:h-96 lg:w-96 overflow-hidden">
-        <img
-            alt={ alternative_text }
-            class="p-2"
-            src={ source }
-        />
-    </div>
+<div class="w-full aspect-square overflow-hidden animate-spinner-grow">
+    <img
+        alt={ alternative_text }
+        src={ source }
+    />
 </div>
+
