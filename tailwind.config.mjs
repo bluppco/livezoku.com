@@ -14,6 +14,15 @@ export default {
                         transform: "translate3d(0, 0, 0)",
                     },
                 },
+				"slide-in-up": {
+                    "0%": {
+                        visibility: "visible",
+                        transform: "translate3d(0, 100%, 0)",
+                    },
+                    "100%": {
+                        transform: "translate3d(0, 0, 0)",
+                    },
+                },
 				"spinner-grow": {
                     "0%": {
                         transform: "scale(0)",
@@ -28,6 +37,7 @@ export default {
       		animation: {
 
 				"fade-in-up": 'fade-in-up 1s ease-in-out 0.25s 1',
+				"slide-in-up": 'slide-in-up 1s ease-in-out 0.25s 1',
 				"spinner-grow": 'spinner-grow 1s ease-in-out 0.25s 1',
 
 			},

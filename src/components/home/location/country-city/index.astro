@@ -1,20 +1,24 @@
 ---
 
 // IMPORTS ASTRO ATOMS
-import ParagraphRegular from "@/atoms/paragraph/regular/index.astro"
-import ListItem2XL from "@/atoms/list-items/two-xl/index.astro"
+import ParagraphBaseThinWiderCenter from "@/atoms/paragraph/base/thin/wider/center/index.astro"
+import ListItemXlThinCenter from "@/atoms/list-items/xl/thin/center/index.astro"
 
 // GET ASTRO PROPS
 const {
 
-    description,
-    heading,
+    country,
     href,
+    location,
 
 } = Astro.props
 
 ---
-<div class="justify-between text-center space-y-2">
-    <ListItem2XL>{ heading }</ListItem2XL>
-    <ParagraphRegular>{ description }</ParagraphRegular>
+<div class="group animate-slide-in-up">
+    <a href={ href }>
+        <div class="group-hover:-translate-y-2 transition ease-in-out delay-100 group-hover:text-dark_red duration-150 mb-2">
+            <ListItemXlThinCenter>{ country }</ListItemXlThinCenter>
+        </div>
+        <ParagraphBaseThinWiderCenter>{ location }</ParagraphBaseThinWiderCenter>
+    </a>
 </div>

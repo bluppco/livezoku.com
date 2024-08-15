@@ -1,57 +1,79 @@
 ---
 
+// IMPORT ASTRO LAYOUTS
+import Container from "@/layouts/container/index.astro"
+
 // IMPORTS ASTRO COMPONENTS
 import CountryCity from "@/components/home/location/country-city/index.astro"
 
 // IMPORT ASTRO ATOMS
-import HeadingTwo from "@/atoms/headings/two/index.astro"
-import Paragraph from "@/atoms/paragraph/xl/center/index.astro"
+import HeadingTwo4xlThinCenter from "@/atoms/headings/two/4xl/thin/center/index.astro"
+import ParagraphBaseWiderCenter from "@/atoms/paragraph/base/wider/center/index.astro"
+
+// COUNTRY ARRAY
+const countries = [
+
+    {
+        country:"Amsterdam",
+        href:"/amsterdam/",
+        location:"Netherlands",
+    },
+    {
+        country:"Copenhagen",
+        href:"/copenhagen/",
+        location:"Denmark",
+    },
+    {
+        country:"Paris",
+        href:"/paris/",
+        location:"France",
+    },
+    {
+        country:"Vienna",
+        href:"/vienna/",
+        location:"Austria",
+    },
+
+]
 
 // GET ASTRO PROPS
 const {
 
-    description1,
-    heading1,
-    heading2,
-    heading3,
-    heading4,
-    heading1_desc1,
-    heading2_desc1,
-    heading3_desc1,
-    heading4_desc1,
+    description,
     title
 
 } = Astro.props
 
 ---
 
-<section class="py-10 space-y-4">
-    <div class="relative flex py-2 items-center">
-        <div class="flex-grow ml-4 border-black border-t-2"></div>
-        <HeadingTwo>{ title }</HeadingTwo>
-        <div class="flex-grow mr-4 border-black border-t-2"></div>
-    </div>
-    <Paragraph>{ description1 }</Paragraph>
-    <section class="grid md:grid-cols-4 md:justify-between pt-10 pb-20">
-        <CountryCity
-            description={ heading1_desc1 }
-            heading={ heading1 }
-            href=""
-        />
-        <CountryCity
-            description={ heading2_desc1 }
-            heading={ heading2 }
-            href=""
-        />
-        <CountryCity
-            description={ heading3_desc1 }
-            heading={ heading3 }
-            href=""
-        />
-        <CountryCity
-            description={ heading4_desc1 }
-            heading={ heading4 }
-            href=""
-        />
-    </section>
+<section class="py-10">
+    <Container>
+        <div class="flex py-2 items-center space-y-2">
+            <div class="flex-grow ml-4 border-black border-t-2"></div>
+            <div class="mx-6">
+                <HeadingTwo4xlThinCenter>{ title }</HeadingTwo4xlThinCenter>
+            </div>
+            <div class="flex-grow mr-4 border-black border-t-2"></div>
+        </div>
+        <ParagraphBaseWiderCenter>{ description }</ParagraphBaseWiderCenter>
+        <div class="space-y-10 md:space-y-0 grid md:grid-cols-4 md:justify-between py-10">
+            {
+
+                countries.map( ( item ) =>{
+
+                    return (
+
+                            <CountryCity
+                                country={ item.country }
+                                href ={ item.href }
+                                location={ item.location }
+                            />
+
+                    )
+
+                })
+
+            }
+        </div>
+    </Container>
 </section>
