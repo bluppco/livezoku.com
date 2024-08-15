@@ -4,7 +4,16 @@ export default {
 	theme: {
 		extend: {
 			keyframes: {
-
+				"fade-in-up": {
+                    "0%": {
+                        opacity: 0,
+                        transform: "translate3d(0, 100%, 0)",
+                    },
+                    "100%": {
+                        opacity: 1,
+                        transform: "translate3d(0, 0, 0)",
+                    },
+                },
 				"spinner-grow": {
                     "0%": {
                         transform: "scale(0)",
@@ -18,7 +27,14 @@ export default {
       		},
       		animation: {
 
+				"fade-in-up": 'fade-in-up 1s ease-in-out 0.25s 1',
 				"spinner-grow": 'spinner-grow 1s ease-in-out 0.25s 1',
+
+			},
+			colors: {
+
+				"light_red":"#fce9d8",
+				"dark_red":"#ff6264",
 
 			},
 		},
