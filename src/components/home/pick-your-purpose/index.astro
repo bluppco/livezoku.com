@@ -4,14 +4,28 @@
 import PickYourPurposeCard from "@/components/home/pick-your-purpose/card/index.astro"
 
 // IMPORT ASTRO ATOMS
-import HeadingTwo from "@/atoms/headings/two/index.astro"
+import HeadingTwo4xlThinCenter from "@/atoms/headings/two/4xl/thin/center/index.astro"
+
+// CARD ARRAY
+const cards = [
+
+    {
+        href:"/team-retreats-and-offsites/",
+        source:"/images/stayandlive4.jpg",
+        title:"TEAM RETREATS AT ZOKU"
+    },
+    {
+        href:"/relocations-at-zoku/",
+        source:"/images/stayandlive4.jpg",
+        title:"RELOCATIONS AT ZOKU"
+    },
+
+]
 
 // GET ASTRO PROPS
 const {
 
     title,
-    title1,
-    title2,
 
 } = Astro.props
 
@@ -20,20 +34,30 @@ const {
 <section class="space-y-10 py-10">
     <div class="relative flex py-5 items-center">
         <div class="flex-grow ml-4 border-black border-t-2"></div>
-        <HeadingTwo>{ title }</HeadingTwo>
+        <div class="mx-2 sm:mx-4 md:mx-6">
+            <HeadingTwo4xlThinCenter>{ title }</HeadingTwo4xlThinCenter>
+        </div>
         <div class="flex-grow mr-4 border-black border-t-2"></div>
     </div>
     
-    <div class="grid grid-cols-2 uppercase">
-        <PickYourPurposeCard
-            alternative_text="image"
-            source="/img.jpeg"
-            title={ title1 }
-        />
-        <PickYourPurposeCard
-            alternative_text="image"
-            source="/img.jpeg"
-            title={ title2 }
-        />
+    <div class="grid grid-cols-2 gap-2 uppercase">
+        {
+
+            cards.map( ( item ) =>{
+
+                return (
+
+                        <PickYourPurposeCard
+                            alternative_text="image"
+                            href={ item.href }
+                            source={ item.source }
+                            title={ item.title }
+                        />
+
+                )
+
+            } )
+
+        }
     </div>
 </section>
