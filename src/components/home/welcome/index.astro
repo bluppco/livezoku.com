@@ -1,8 +1,11 @@
 ---
 
+// IMPORT ASTRO LAYOUTS
+import Container from "@/layouts/container/index.astro"
+
 // IMPORT ASTRO ATOMS
-import ParagraphRegularCenter from "@/atoms/paragraph/regular/center/index.astro"
-import HeadingOne from "@/atoms/headings/one/index.astro"
+import ParagraphBaseCenter from "@/atoms/paragraph/base/center/index.astro"
+import HeadingOne4xlThinCenter from "@/atoms/headings/one/4xl/thin/center/index.astro"
 
 // GET ASTRO PROPS
 const {
@@ -15,10 +18,20 @@ const {
 
 ---
 
-<section class="space-y-8 py-12">
-    <div class="pb-4">
-        <HeadingOne>{ title }</HeadingOne>
-    </div>
-    <ParagraphRegularCenter>{ sub_title }</ParagraphRegularCenter>
-    <ParagraphRegularCenter>{ description }</ParagraphRegularCenter>
+<section class="py-12">
+    <Container>
+        <div class="space-y-8">
+            <div class="relative group pb-4">
+                <HeadingOne4xlThinCenter>{ title }
+                    <span class="flex justify-center">
+                        <span class="absolute border-b-2 border-black w-32 md:w-80 mt-4"></span>
+                    </span>
+                </HeadingOne4xlThinCenter>
+            </div>
+            <ParagraphBaseCenter>{ sub_title }</ParagraphBaseCenter>
+            <div class="md:px-10 lg:px-20 xl:px-30 2xl:px-60">
+                <ParagraphBaseCenter>{ description }</ParagraphBaseCenter>
+            </div>
+        </div>
+    </Container>
 </section>

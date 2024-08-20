@@ -1,9 +1,9 @@
 ---
 
 // IMPORT ASTRO ATOMS
-import ButtonRedTextlg from "@/atoms/buttons/red/lg/index.astro"
-import HeadingTwoXL from "@/atoms/headings/two/wider/index.astro"
-import ParagraphXlCenter from "@/atoms/paragraph/xl/center/index.astro"
+import ButtonRedLarge from "@/atoms/buttons/red/lg/index.astro"
+import HeadingTwo2xlThinCapitalizeCenter from "@/atoms/headings/two/2xl/thin/capitalize/center/index.astro"
+import ParagraphBaseWiderCenter from "@/atoms/paragraph/base/wider/center/index.astro"
 
 // GET ASTRO PROPS
 const {
@@ -16,24 +16,29 @@ const {
 
 ---
 
-<section class="bg-orange-100 h-100">
-    <div class="pt-12 space-y-6">
-        <div class="pb-6">
-            <HeadingTwoXL>{ title }</HeadingTwoXL>
+<section class="bg-light_red pt-12 pb-8">
+    <div class="space-y-6">
+        <div class="mx-20 animate-fade-in-up">
+            <HeadingTwo2xlThinCapitalizeCenter>{ title }</HeadingTwo2xlThinCapitalizeCenter>
+            <div class="flex items-center justify-center">
+                <div class="w-24 h-px mt-5 border-0 bg-gray-700"></div>
+            </div>
         </div>
-        <ParagraphXlCenter>{ description }</ParagraphXlCenter>
-        <div class="text-center pb-8 gap-7">
+        <div class="mx-20 animate-fade-in-up">
+            <ParagraphBaseWiderCenter>{ description }</ParagraphBaseWiderCenter>
+        </div>
+        <div class="mx-20 sm:mx-40 md:mx-0 text-center space-y-2 md:flex md:gap-2 md:justify-center md:space-y-0 animate-fade-in-up">
             <input
-                class="relative items-center text-center font-thin justify-center py-2 px-10 text-gray bg-white"
+                class="text-center font-bryant_web font-thin py-2 px-10 text-gray bg-white outline-none uppercase"
                 placeholder="First Name"
                 type="text"
             />
             <input
-                class="relative items-center text-center font-thin justify-center py-2 px-10 text-gray bg-white"
+                class="text-center font-bryant_web font-thin py-2 px-10 text-gray bg-white outline-none uppercase"
                 placeholder="Email"
                 type="text"
             />
-            <ButtonRedTextlg>{ button_text }</ButtonRedTextlg>
+            <ButtonRedLarge>{ button_text }</ButtonRedLarge>
         </div>
     </div>
 </section>
