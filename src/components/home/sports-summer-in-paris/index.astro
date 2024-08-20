@@ -4,6 +4,7 @@
 import Container from "@/layouts/container/index.astro"
 
 // IMPORT ASTRO COMPONENTS
+import Link from "@/atoms/links/index.astro"
 import SportSummerInParisCard from "@/components/home/sports-summer-in-paris/card/index.astro"
 
 // IMPORT ASTRO ATOMS
@@ -71,9 +72,9 @@ const {
                 }
             </div>
             <div class="flex justify-center">
-                <a href="/paris/sports-summer/">
+                <Link aria_label={ button_text } href="/paris/sports-summer/">
                     <ButtonTransparentHoverBlack>{ button_text }</ButtonTransparentHoverBlack>
-                </a>
+                </Link>
             </div>
         </div>
     </Container>
