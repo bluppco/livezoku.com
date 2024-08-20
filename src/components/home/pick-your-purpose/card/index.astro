@@ -2,6 +2,8 @@
 
 // IMPORT ASTRO ATOMS
 import HeadingThree3xlUppercaseCenterWhite from "@/atoms/headings/three/3xl/uppercase/center/white/index.astro"
+import Link from "@/atoms/links/index.astro"
+import PictureInternal from "@/atoms/picture/internal/index.astro"
 
 // GET ASTRO PROPS
 const {
@@ -16,19 +18,18 @@ const {
 ---
 <div class="relative mx-auto mt-15">
     <div class="px-2 lg:px-4 w-4/5 aspect-[9/8] relative">
-        <img
-            alt={ alternative_text }
-            class="h-full w-full object-cover"
-            src={ source }
+        <PictureInternal 
+            alternative_text={ alternative_text }
+            source={ source }
         />
     </div>
     <div class="absolute inset-0 bg-black opacity-35 mx-2 lg:mx-4" />
     <div class="absolute inset-0 flex items-center justify-center">
-        <a href={ href }>
+        <Link aria_label={ title } href={ href }>
             <div class="relative group animate-slide-in-up">
                 <HeadingThree3xlUppercaseCenterWhite>{ title }</HeadingThree3xlUppercaseCenterWhite>
             <span class="absolute inset-0 border-b-2 mt-10 group-hover:border-white transition-transform duration-300 transform scale-x-0 group-hover:scale-x-100 origin-center"></span>
             </div>
-        </a>
+        </Link>
     </div>
 </div>
