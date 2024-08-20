@@ -1,22 +1,24 @@
 ---
 
+// IMPORT ASTRO ATOMS
+import Link from "@/atoms/links/index.astro"
+import PictureInternal from "@/atoms/picture/internal/index.astro"
+
 // GET ASTRO PROPS
 const {
 
     alternative_text,
-    href,
     source,
 
 } = Astro.props
 
 ---
-<a href={ href }>
-    <div class="relative p-2 h-80 mx-auto mt-15">
-        <img
-            alt={ alternative_text }
-            class="w-full h-full"
-            src={ source }
+<Link aria_label="/www.instagram.com/livezoku/" href="/www.instagram.com/livezoku/">
+    <div class="relative w-6/7 aspect-square animate-spinner-grow">
+        <PictureInternal
+            alternative_text={ alternative_text }
+            source={ source }
         />
-        <div class="absolute inset-0 mx-3 my-4 opacity-50 overflow-hidden transition delay-300 ease-in-out hover:scale-105 duration-500 hover:bg-gray-700"/>
+        <div class="absolute inset-0 md:m-2 lg:m-1 opacity-50 overflow-hidden transition delay-300 ease-in-out hover:scale-105 duration-500 hover:bg-black"/>
     </div>
-</a>
+</Link>

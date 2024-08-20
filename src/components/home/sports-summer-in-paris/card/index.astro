@@ -1,7 +1,7 @@
 ---
 
 // IMPORT ASTRO ATOMS
-import HeadingThree from "@/atoms/headings/three/index.astro"
+import PictureInternal from "@/atoms/picture/internal/index.astro"
 
 // GET ASTRO PROPS
 const {
@@ -13,9 +13,9 @@ const {
 
 ---
 <div class="w-full aspect-square overflow-hidden animate-spinner-grow">
-    <img
-        alt={ alternative_text }
-        src={ source }
+    <PictureInternal
+        alternative_text={ alternative_text }
+        source={ source }
     />
 </div>
 

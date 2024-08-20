@@ -1,50 +1,74 @@
 ---
 
+// IMPORT ASTRO LAYOUTS
+import Container from "@/layouts/container/index.astro"
+
 // IMPORT ASTRO COMPONENTS
 import InstagramPost from "@/components/home/follow-us/instagram-post/index.astro"
 
 // IMPORT ASTRO ATOMS
-import HeadingTwo from "@/atoms/headings/two/index.astro"
+import Link from "@/atoms/links/index.astro"
+import HeadingTwo4xlThinCenter from "@/atoms/headings/two/4xl/thin/center/index.astro"
+
+// IMAGE ARRAY
+const images = [
+
+    {
+        source:"/images/follow-us1.jpg",
+    },
+    {
+        source:"/images/follow-us2.jpg",
+    },
+    {
+        source:"/images/follow-us3.jpg",
+    },
+    {
+        source:"/images/follow-us4.jpg",
+    },
+
+]
 
 // GET ASTRO PROPS
 const {
 
-title,
+    title,
 
 } = Astro.props
 
 ---
 
 <section>
-    <div class="relative flex py-4 items-center">
-        <div class="flex-grow ml-4 border-black border-t-2"></div>
-        <HeadingTwo>{ title }</HeadingTwo>
-        <div class="flex-grow mr-4 border-black border-t-2"></div>
-    </div>
-    
-    <div class="grid grid-cols-2 lg:grid-cols-4 mt-10 mb-20">
-        <InstagramPost
-            alternative_text=""
-            href=""
-            source="/images/follow-us1.jpg"
-        />
-        <InstagramPost
-            alternative_text=""
-            href=""
-            source="/images/follow-us2.jpg"
-        />
-        <InstagramPost
-            alternative_text=""
-            href=""
-            source="/images/follow-us3.jpg"
-        />
-        <InstagramPost
-            alternative_text=""
-            href=""
-            source="/images/follow-us4.jpg"
-        />
-        <div>
-            <i class="fa-brands fa-instagram text-xl"></i>&nbsp;&nbsp;<a href="" class="hover:text-red-400 text-gray-800 text-sm">@livezoku</a>
+    <Container>
+        <div class="relative flex py-4 items-center">
+            <div class="flex-grow ml-4 border-black border-t-2"></div>
+            <div class="mx-6">
+                <HeadingTwo4xlThinCenter>{ title }</HeadingTwo4xlThinCenter>
+            </div>
+            <div class="flex-grow mr-4 border-black border-t-2"></div>
         </div>
-    </div>
+        <div class="grid grid-cols-2 gap-2 lg:gap-6 lg:grid-cols-4 mt-10 mb-20">
+            {
+    
+                images.map( ( item ) =>{
+    
+                    return (
+    
+                            <InstagramPost
+                                alternative_text="Image"
+                                source={ item.source }
+                            />
+    
+                    )
+    
+                })
+    
+            }
+            <div class="flex items-center gap-3">
+                <i class="fa-brands fa-instagram text-xl"></i>
+                <Link aria_label="@livezoku" href="/www.instagram.com/livezoku/">
+                    <span class="inline-block hover:text-red-400 text-gray-800 text-sm">@livezoku</span>
+                </Link>
+            </div>
+        </div>
+    </Container>
 </section>
