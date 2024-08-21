@@ -1,8 +1,7 @@
 ---
 
 // IMPORT ASTRO ATOMS
-import InputEmail from "@/atoms/inputs/input-name/index.astro"
-import InputName from "@/atoms/inputs/input-email/index.astro"
+import Input from "@/atoms/inputs/input/index.astro"
 import ButtonRedLarge from "@/atoms/buttons/red/lg/index.astro"
 import HeadingTwo2xlThinCapitalizeCenter from "@/atoms/headings/two/2xl/thin/capitalize/center/index.astro"
 import ParagraphBaseWiderCenter from "@/atoms/paragraph/base/wider/center/index.astro"
@@ -30,8 +29,12 @@ const {
             <ParagraphBaseWiderCenter>{ description }</ParagraphBaseWiderCenter>
         </div>
         <div class="mx-20 sm:mx-40 md:mx-0 text-center space-y-2 md:flex md:gap-2 md:justify-center md:space-y-0 animate-fade-in-up">
-            <InputName />
-            <InputEmail />
+            <Input 
+            placeholder="Name"
+            />
+            <Input 
+            placeholder="Email"
+            />
             <ButtonRedLarge>{ button_text }</ButtonRedLarge>
         </div>
     </div>
