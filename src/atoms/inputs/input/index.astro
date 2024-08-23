@@ -1,5 +1,17 @@
+---
+
+//GET ASTRO PROPS
+const {
+
+    placeholder
+
+} = Astro.props;
+
+---
 <input
     class="text-center font-bryant_web font-thin py-2 px-10 text-gray bg-white outline-none uppercase"
-    placeholder="First Name"
+    placeholder={ placeholder}
     type="text"
-/>
+>
+    <slot/>
+</input>
