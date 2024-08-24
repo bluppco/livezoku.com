@@ -1,3 +1,13 @@
-<p className="text-center text-sm font-bryant_web font-thin tracking-wider">
-    <slot/>
-</p>
+const ParagraphSmallThinCnter = ( props ) => {
+
+    return (
+
+            <p className="text-center text-xs xl:text-sm font-bryant_web tracking-wider">
+                { props.children }
+            </p>
+
+    )
+
+}
+
+export default ParagraphSmallThinCnter

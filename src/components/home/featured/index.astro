@@ -1,81 +1,28 @@
 ---
 
-// IMPORT ASTRO COMPONENTS
-import News from "@/components/home/featured/news/index.astro"
+// IMPORT JSX COMPONENTS
+import NewsCarousel from "@/components/home/featured/jsx/index"
 
 // IMPORT ASTRO ATOMS
-import HeadingTwo from "@/atoms/headings/two/index.astro"
+import HeadingTwo4xlThinCenter from "@/atoms/headings/two/4xl/thin/center/index.astro"
 
 // GET ASTRO PROPS
 const {
 
-    description1,
-    description2,
-    description3,
-    description4,
-    description5,
-    description6,
-    description7,
     title
 
 } = Astro.props
 
 ---
-
-<section class="space-y-4 mb-10">
+<section class="pt-5 pb-20">
     <div class="relative flex py-5 items-center">
         <div class="flex-grow ml-4 border-black border-t-2"></div>
-        <HeadingTwo>{ title }</HeadingTwo>
+        <div class="mx-6"> 
+            <HeadingTwo4xlThinCenter>{ title }</HeadingTwo4xlThinCenter>
+        </div>
         <div class="flex-grow mr-4 border-black border-t-2"></div>
     </div>
-    <section class="grid sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7">
-        <News
-            alternative_text="Image"
-            description={ description1 }
-            source="/images/Featured_img1.png"
-        />
-        <News
-            alternative_text="Image"
-            description={ description2 }
-            source="/images/Featured_img2.png"
-        />
-        <News
-            alternative_text="Image"
-            description={ description3 }
-            source="/images/Featured_img3.jpg"
-        />
-        <News
-            alternative_text="Image"
-            description={ description4 }
-            source="/images/Featured_img4.png"
-        />
-        <News
-            alternative_text="Image"
-            description={ description5 }
-            source="/images/Featured_img5.png"
-        />
-        <News
-            alternative_text="Image"
-            description={ description6 }
-            source="/images/Featured_img6.jpg"
-        />
-        <News
-            alternative_text="Image"
-            description={ description7 }
-            source="/images/Featured_img7.png"
-        />
-    </section>
+    <div>
+        <NewsCarousel client:load/>
+    </div>
 </section>
-
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-<script>
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-    },
-    });
-</script>
