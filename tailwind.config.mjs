@@ -46,6 +46,7 @@ export default {
 				"light_red":"#fce9d8",
 				"dark_red":"#ff6264",
                 "light_skyblue":"#80c4e1",
+                "light_gray":"#F0F1F1",
 
 			},
 		},
